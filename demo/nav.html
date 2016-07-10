@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="http://skin.kankanews.com/v6/css/base.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="http://skin.kankanews.com/v6/js/device.js"></script>
+    <script type="text/javascript">
+    	var $winW = screen.width;
+    </script>
+    <link rel="stylesheet" type="text/css" href="../app/css/nav.css">
+</head>
+<body>
+	<div class="header">
+		<div class="header-bg"></div>
+		<div class="header-content">
+			<div class="logo">
+				<a href="http://www.kankanews.com/" target="_blank">
+					<img src="../app/images/kklogo.png" class="boss" data-mod="导航栏" data-action="看比赛logo">
+				</a>
+			</div>
+			<div class='menu'>
+				<a href="http://www.kankanews.com/" data-mod="首页" data-action="首页" target="_blank">首页</a>
+				<a href="http://live.kankanews.com/"class="cur" data-mod="直播" data-action="直播" target="_blank">直播<i></i></a>
+				<a href="http://live.kankanews.com/" data-mod="专题" data-action="专题" target="_blank">专题</a>
+				<a href="http://www.kankanews.com/shanghai" data-mod="上海" data-action="上海" target="_blank">上海</a>
+				<a href="http://www.kankanews.com/shanghai" data-mod="热点" data-action="上海" target="_blank">热点</a>
+				<a href="http://www.kankanews.com/shanghai" data-mod="图片" data-action="上海" target="_blank">图片</a>
+				<a href="http://www.kankanews.com/shanghai" data-mod="电视回看" data-action="上海" target="_blank">电视回看</a>
+				<a href="http://www.kankanews.com/shanghai" data-mod="更多" data-action="上海" target="_blank">更多</a>
+			</div>
+			<!--start 搜索-->
+			<div class="searchBox right">
+				<form action="http://www.kankanews.com/search/" id="all_search" method="get" target="_blank" class="clearfix">
+					<input type="text" placeholder="请输入关键字" class="searchTxt" value="" name="q" />
+					<input type="submit" class="searchBtn" value="" />
+				</form>
+			</div>
+			<!--end 搜索-->
+			<!--start 天气 -->
+			<div class="weatherBox right"></div>
+			<!--end 搜索-->
+
+		</div>
+	</div>
+	<script type="text/javascript" src="http://114.80.151.109/spa/20160114/vendor/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		/*天气预报*/
+			$.ajax({
+				url: 'http://shanghaicity.openservice.kankanews.com/public/default/apisv2?jsoncallback=?',
+				dataType: "json",
+				success: function (obj) {
+					var weather_str='',weather='',tempe='',pic='',pic2='',w;
+					weather_str='上海'+obj.list.weather;
+					weather=$('<span class="tempe">'+weather_str+'</span>');
+					tempe=$('<span class="tempe">'+obj.list.tempe+'</span>');
+					pic=$('<img src="'+obj.list.pic+'">');
+					for(var i=0;i<obj.yj.length;i++){
+						pic2+='<img src="http://shanghaicity.openservice.kankanews.com/'+obj.yj[i]+'">';
+					}
+					w=$("<div class='weather right'>");
+					w.append(pic2,pic,weather,tempe);
+					$(".weatherBox").append(w);
+					if(device.type === "pad") {
+						$(".weather").css({"height":'40px','overflow':'hidden', 'margin-top':'20px'});
+						$(".weather img").css({"float":'left','padding-right':'10px'});
+						var width=$(document).width();
+						$(".weather span").css({'height':'20px','line-height':'20px'});
+						if($("span.tempe").width()+50>320){
+							$(".weather span").css("display","inline");
+						}else{
+							$(".weather span").css({"display":"block","width":$("span.tempe").width()+50+'px'});
+						}
+						$(".weather").css("max-width",'320px');
+					}
+					
+				}
+			});
+	</script>
+	</body>
+</html>

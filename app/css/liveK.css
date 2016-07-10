@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+body.game-page {
+    padding-top: 0;
+    background: #f4f4f4 no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    min-width: 1024px !important;
+    width: expression((document.documentElement.clientWidth<1200||document.body.clientWidth<1200)?"1024":"100%");
+}
+@media (max-width:1180px) {
+    .section,.copyright {
+        margin-right: 0
+    }
+
+    .aside {
+        display: none
+    }
+}
+

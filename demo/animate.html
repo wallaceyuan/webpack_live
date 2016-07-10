@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <meta name="format-detection" content="telephone=no,address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>2015回顾</title>
+    <script type="text/javascript">
+        !function(a){function b(){var b=g.getBoundingClientRect().width;a.rem=(b/6.4>100?100:(b/6.4<50?50:b/6.4)),g.style.fontSize=a.rem+"px"}var g=a.document.documentElement,e;a.addEventListener("resize",function(){clearTimeout(e),e=setTimeout(b,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(e),e=setTimeout(b,300))},!1),b()}(window);
+    </script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .page2{
+            width: 100%;
+            height: 100vh;
+            background: url("http://114.80.151.109/kkcontentv3/df20161/images/bg2.jpg") no-repeat 0 0;
+            background-size: 100%;
+        }
+
+        .page1-1, .page1-1-1, .page1-1-2, .page1-1-3, .page1-1-4, .page1-3-1, .page2-1, .page2-2, .page2-2-1, .page2-2-2, .page2-2-3, .page4-1 {
+            position: absolute;
+            left: 0;
+            width: 100%;
+        }
+        .page2-1 {
+            top: .4rem;
+        }
+        .page2-1{ top: .4rem;}
+        .page2-2{ top: 4rem;}
+        .page2-2-1,.page2-2-2,.page2-2-3{ top: 0;}
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .swiper-slide-active .page2-2-3 {
+            -webkit-backface-visibility: hidden;
+            -webkit-animation: pulse .5s linear both;
+            animation: pulse .5s linear both;
+        }
+
+        .swiper-slide-active .page2-2-2 {
+            -webkit-backface-visibility: hidden;
+            -webkit-animation: fadeIn .5s .4s linear both;
+            animation: fadeIn .5s .4s linear both;
+        }
+        .swiper-slide-active .page2-2-1 {
+            -webkit-backface-visibility: hidden;
+            -webkit-animation: fadeUp .5s .8s linear both;
+            animation: fadeUp .5s .8s linear both;
+        }
+
+
+        @-webkit-keyframes pulse{0%{opacity:0;-webkit-transform:scale3d(1.5,1.5,1.5);transform:scale3d(1.5,1.5,1.5);}
+            50%{opacity:1;-webkit-transform:scale3d(1.25,1.25,1.25);transform:scale3d(1.25,1.25,1.25);}
+            100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1);}
+        }
+        @keyframes pulse{0%{opacity:0;-webkit-transform:scale3d(1.5,1.5,1.5);transform:scale3d(1.5,1.5,1.5);}
+            50%{opacity:1;-webkit-transform:scale3d(1.25,1.25,1.25);transform:scale3d(1.25,1.25,1.25);}
+            100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1);}
+        }
+
+        @-webkit-keyframes fadeIn{0%{opacity:0;}
+            100%{opacity:1;}
+        }
+        @keyframes fadeIn{0%{opacity:0;}
+            100%{opacity:1;}
+        }
+        @-webkit-keyframes fadeUp{0%{opacity:0;-webkit-transform:translate3d(0,50%,0);transform:translate3d(0,50%,0);}
+            100%{opacity:1;-webkit-transform:none;transform:none;}
+        }
+        @keyframes fadeUp{0%{opacity:0;-webkit-transform:translate3d(0,50%,0);transform:translate3d(0,50%,0);}
+            100%{opacity:1;-webkit-transform:none;transform:none;}
+        }
+    </style>
+</head>
+<body>
+    <div class="page2 swiper-slide-active">
+        <div class="page2-2">
+            <div class="page2-2-1"><img src="http://114.80.151.109/kkcontentv3/df20161/images/bt.png"></div>
+            <div class="page2-2-2"><img src="http://114.80.151.109/kkcontentv3/df20161/images/line.png"></div>
+            <div class="page2-2-3"><img src="http://114.80.151.109/kkcontentv3/df20161/images/bt1.png"></div>
+        </div>
+    </div>
+</body>
+</html>

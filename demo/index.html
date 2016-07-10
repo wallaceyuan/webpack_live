@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="icon" href="http://skin.kankanews.com/kankancms/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="http://skin.kankanews.com/kankancms/images/favicon.ico" type="image/x-icon" />
+	<meta name="Keywords" content="视频直播, 新闻直播, 新闻直播间, 搞笑视频, 明星访谈直播, 电影直播, 电视剧直播, 天气预报" />
+	<meta name="Description" content="看看新闻网24小时直播流。视频直播重大事件、直播突发新闻、直播权威发布、直播电影电视剧发布并精选每日国际与国内视频新闻、社会新闻、体育新闻、娱乐 新闻、财经新闻。每天不同时段播出视频资讯、新闻评论节目，搜集论坛热点、汇聚搞笑视频，发布天气预报并可通过视频参与直播。" />
+	<title>新闻直播频道_突发新闻直播_视频直播在线观看_看看新闻网</title>
+	<script type="text/javascript" src="http://skin.kankanews.com/v6/js/device.js"></script>
+	<link href="http://skin.kankanews.com/v6/css/base.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+		var $winW = screen.width;
+	</script>
+	<script type="text/javascript" src="http://skin.kankanews.com/v6/index/js/topBarCSS.js"></script>
+	<script type="text/javascript">
+        document.write('<link href="../app/css/index.css" type="text/css" rel="stylesheet"/>');
+		if(device.type === "pad") {
+			document.write('<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>');
+			document.write('<link rel="stylesheet" href="../app/css/liveP.css" type="text/css" />');
+		}else{
+			if($winW>1024){
+				document.write('<link rel="stylesheet" href="../app/css/liveK.css" type="text/css" />');
+			}else{
+				document.write('<link rel="stylesheet" href="../app/css/liveZ.css" type="text/css" />');
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		var info={
+			title:"直播",
+			titlepic:"http://static.statickksmg.com/image/2015/03/30/08c0539ccf920c4473329195622ee4f7.jpg",
+			url:document.URL,
+			intro:"看看直播"
+		};
+		var now = 'nows';
+	</script>
+</head>
+<body class="game-page loaded">
+	<img src="../app/images/live-index.jpg" class="page-bg">
+	<div class="header watchgame-mid-header live">
+		<div class="topBar">
+			<div class="box topBarBox clearfix">
+				<div class="logoBox left"> <a href="http://www.kankanews.com" class="logo">看看新闻网</a> </div>
+				<!--start 搜索-->
+				<div class="searchBox right">
+					<form action="http://www.kankanews.com/search/" id="all_search" method="get" target="_blank">
+						<input type="text" placeholder="请输入关键字" class="searchTxt" value="" name="q" />
+						<input type="submit" class="searchBtn" value="" />
+					</form>
+				</div>
+				<!--end 搜索-->
+			</div>
+		</div>
+	</div>
+
+	<div class="place38"></div>
+	<div class="live-box hidden clearfix">
+		<div class="section">
+			<div class="tv-head">
+				<div class="live-head-container">
+					<div class="game-head">
+						<div class="thumb-container"></div>
+						<div class="left badge pull-left">
+							<p class="head">当前播放：<span class='title'></span></p>
+							<p class="time"><i></i><span>2016-01-07</span><span>18:00</span></p>
+						</div>
+						<div class="liveShare clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="living-area" id="livingArea">
+				<div class="sectionBox">
+					<div id="livediv" class="screen"></div>
+					<div id="ipod_player" style="display:none;">
+						<video controls="" poster=""><source src="http://hls.kksmg.com/iphone/downloads/ch1/index.m3u8" type="video/mp4" id="ipodurl"></video>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside live-Interaction">
+			<div class="live-tabs clearfix">
+				<h3 class="boss live-tabs-width2 live-tabs-current" data-target="live-program" data-action="直播列表">直播列表</h3>
+				<h3 class="boss live-tabs-width2" data-target="live-comment" data-action="弹幕集锦">弹幕集锦</h3>
+			</div>
+			<div class="live-tab-content">
+				<div class="tabcon" id="content-1">
+					<div class="clearfix bottom1" id="jmyg">
+						<div class="program-title inner">
+							<h3 class="zbIcon">正在直播</h3>
+						</div>
+						<div id="zbLiu"></div>
+						<div class="program-title inner">
+							<h3 class="ygIcon">直播预告</h3>
+						</div>
+						<div id="ygLiu"></div>
+					</div>
+				</div>
+				<div class="tabcon" id="content-2"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="non-live-box hidden clearfix">
+		<div class="section">
+			<div class="tv-head">
+				<div class="live-head-container">
+					<div class="game-head">
+						<div class="thumb-container">
+
+						</div>
+						<div class="left badge pull-left">
+							<p class="head">当前播放：<span class='title'></span></p>
+							<p class="time">
+								<i></i>
+								<span>2016-01-07</span><span>18:00</span>
+							</p>
+						</div>
+						<div class="liveShare clearfix"></div>
+					</div>
+				</div>
+			</div>
+			<div class="living-area" id="livingArea">
+				<div class="sectionBox">
+					<div id="livediv" class="screen"></div>
+					<div id="ipod_player" style="display:none;">
+						<video controls="" poster=""><source src="http://hls.kksmg.com/iphone/downloads/ch1/index.m3u8" type="video/mp4" id="ipodurl"></video>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside live-Interaction">
+			<div class="live-tabs clearfix">
+				<h3 class="boss live-tabs-width2 live-tabs-current" data-target="live-program" data-action="电视回看">电视回看</h3>
+				<h3 class="boss live-tabs-width2" data-target="live-comment" data-action="弹幕集锦">弹幕集锦</h3>
+			</div>
+			<div class="live-tab-content">
+				<div class="tabcon" id="content-1">
+					<div class="clearfix bottom1" id="jmyg">
+						<div class="program-title inner">
+							东方卫视 2016.1.6 节目列表
+						</div>
+						<div class='time-program inner'>
+							<span>21:23</span>金星时间<em>看直播</em>
+						</div>
+						<div class='time-program inner'>
+							<span>21:23</span>金星时间<em>看直播</em>
+						</div>
+						<div class='time-program inner'>
+							<span>21:23</span>金星时间<em>看直播</em>
+						</div>
+						<div class='time-program inner'>
+							<span>21:23</span>金星时间<em>看直播</em>
+						</div>
+						<div class='time-program inner'>
+							<span>21:23</span>金星时间<em>看直播</em>
+						</div>
+					</div>
+				</div>
+				<div class="tabcon" id="content-2"></div>
+				<div class="date-box clearfix" style="display:none;">
+					<div class="active"><p class='week'>周四</p><p class="date">31</p></div>
+					<div><p class='week'>周五</p><p class="date">01</p></div>
+					<div><p class='week'>周六</p><p class="date">02</p></div>
+					<div><p class='week'>周日</p><p class="date">03</p></div>
+					<div><p class='week'>周一</p><p class="date">04</p></div>
+					<div><p class='week'>周二</p><p class="date">05</p></div>
+					<div><p class='week'>周三</p><p class="date">06</p></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../vendor/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src='../vendor/jquery.mCustomScrollbar.concat.min.js'></script>
+	<script type="text/javascript" src="../bulid/zbl.js"></script>
+	<script type="text/javascript" src="../bulid/1212.js"></script>
+	<script>
+		sharebtn= a.share(info);
+		$(".liveShare").append(sharebtn.wb,sharebtn.qq,sharebtn.wx);
+
+		if(now =='now'){
+			a.zbInit();
+			$(window).resize(function() {
+				a.zbLiveWidth();
+			});
+		}else{
+			a.hkInit();
+			$(window).resize(function() {
+				a.hkLiveWidth();
+			});
+		}
+		$("#content-1").mCustomScrollbar({
+			
+		});
+
+	</script>
+</body>
+</html>

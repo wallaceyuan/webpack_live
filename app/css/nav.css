@@ -1,0 +1,123 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #fff;
+    text-decoration: none;
+}
+a {
+    cursor: pointer;
+}
+.header-bg{
+    position: absolute;
+    background-color: #000;
+    opacity: .6;
+    -moz-opacity: .6;
+    filter: alpha(opacity=60);
+    height: 40px;
+    width: 100%;
+}
+.header .header-content {
+    margin: 0 auto;
+    height: 40px;
+    padding: 0px 30px 0 30px;
+	margin-right: 325px;
+	min-width: 770px !important;
+}
+.header .logo {
+    position: relative;
+    padding: 6px 0 0 0;
+    width: 125px;
+    height: 27px;
+    float: left;
+}
+.header .menu {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    margin-left: 50px;
+}
+.header .menu a{
+	position: relative;
+    padding: 0 7px;
+    display: inline-block;
+    font-weight: 400;
+    height: 100%;
+    color: #fff;
+    font-size: 14px;
+}
+.header .menu a.cur{
+	border-bottom: 4px #e63c2e solid;
+	height: 36px;
+}
+.header .menu a.cur i {
+    display: block;
+    height: 4px;
+    width: 4px;
+    background-color: #e63c2e;
+    border-radius: 2px;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    overflow: hidden;
+}
+/*搜索*/
+.header .searchBox {
+    height: 22px;
+    text-align: right;
+    background: #fff;
+    overflow: hidden;
+    width: 158px;
+    position: relative;
+    margin-top: 8px;
+    opacity: .6;
+    -moz-opacity: .6;
+    filter: alpha(opacity=60);
+}
+.right {
+    float: right;
+    display: inline;
+}
+.header .searchBox input.searchTxt {
+    width: 123px;
+    height: 18px;
+    line-height: 18px;
+    color: #808080;
+    padding: 2px 10px 2px 10px;
+    float: left;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+    outline-style: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.header .searchBox input.searchBtn {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 22px;
+    background: url(../images/search.png) no-repeat;
+    cursor: pointer;
+}
+/*天气预报*/
+.weather{padding-right: 10px;color: #fff; position: relative; top: 0; right: 0;}
+.weather span,.weather img{ height:40px; line-height: 40px; display: inline-block; }
+.weather img{ padding-right:10px;}
+.weather span{ padding-right:5px;}
+@media (max-width: 1400px) {
+    .header .header-content{
+        margin-right: 0px;
+    }
+}
+@media (max-width: 1100px) {
+    .weather{display: none;}
+}

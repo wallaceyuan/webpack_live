@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+body{ min-width:994px !important; width: expression((document.documentElement.clientWidth<994||document.body.clientWidth<994)?"994px":"100%");}
+.w1170{ width: 970px; margin: 0 auto;}
+.box{ width:970px; margin: 0 auto;}
+
+.liveBox{ width:970px; margin:0 auto; text-align:left; padding:10px 0;}
+.video{width: 673px; height:423px; overflow:hidden; background:#000;}
+.livediv{ width:100%; height:100%;}
+#player1,#player2{  width:100%; height:100%;}
+.videoFlow{ width:297px; height:423px; }
+.tabBox{ height:360px; padding-bottom:10px;}
+.tabcon{ height:360px;}
+.videoListBox{ height:423px;  overflow:hidden;}
+
+
+/*------天气weather-----*/
+.weather{ width:225px; overflow:hidden; float:right;}
+.weather img { padding-right: 10px; float: left;}
+span.tempe { height: 20px; line-height: 20px; display: block; overflow:hidden;}

@@ -1,0 +1,209 @@
+.program_list{
+  min-width: 280px;
+  width: expression("280px"); /* set min-width for IE */
+}
+.aside .program_all{
+  min-width: 174px;
+  width: expression("174px"); /* set min-width for IE */
+}
+.play-rc-pack .program_all{
+  display:none;
+}
+
+$dateBox : 75px;
+$itemHeight : 77px;
+
+
+$five_1920:1920px;$five_W:1890px;$five_vw:1315px;$five_vh:$five_vw *9 /16 + 45;
+$five_ph:$five_vh + 90 - $dateBox;
+$five_fh:$five_vh + 20 - $itemHeight;
+
+
+$four_1680:1680px;$four_W:1650px;$four_vw:1075px;$four_vh:$four_vw *9 /16 + 45;
+$four_ph:$four_vh + 90 - $dateBox;
+$four_fh:$four_vh + 20 - $itemHeight;
+
+$three_1440:1440px;$three_W:1410px;$three_vw:835px;$three_vh:$three_vw *9 /16 + 45;
+$three_ph:$three_vh + 90 - $dateBox;
+$three_fh:$three_vh + 20 - $itemHeight;
+
+$two_1180:1180px;$two_W:1150px;$two_vw:680px;$two_vh:$two_vw *9 /16;
+$two_ph:$two_vh + 90 - $dateBox;
+$two_fh:$two_vh + 20 - $itemHeight;
+
+.aside{
+  left:$three_vw;
+}
+.section,.living-area{
+  width : $three_vw;
+}
+.screen{
+  width : $three_vw;
+  height: $three_vh;
+}
+.non-live-box .live-tab-content{
+  height:$three_ph;
+}
+.non-live-box .channel_fm{
+  height:$three_fh;
+}
+
+
+
+
+@media (min-width: $five_1920) {
+  .aside{
+    left:$five_vw;
+  }
+  .section,.living-area{
+    width : $five_vw;
+  }
+  .screen{
+    width : $five_vw;
+    height: $five_vh;
+  }
+  .non-live-box .live-tab-content{
+    height:$five_ph;
+  }
+  .non-live-box .channel_fm{
+    height:$five_fh;
+  }
+}
+@media (max-width: $five_1920) {
+  .play-rc-pack .non-live-box{
+    min-width: 1595px;width: 1595px;margin:0 auto;
+  }
+  .aside{
+    left:$five_vw;
+  }
+  .section,.living-area{
+    width : $five_vw;
+  }
+  .screen{
+    width : $five_vw;
+    height: $five_vh;
+  }
+  .non-live-box .live-tab-content{
+    height:$five_ph;
+  }
+  .non-live-box .channel_fm{
+    height:$five_fh;
+  }
+}
+@media(min-width:$four_1680+ 1 ){
+  .non-live-box{
+    min-width: 1559px;
+  }
+}
+
+
+
+@media (max-width: $four_1680) {
+  .play-rc-pack .non-live-box{
+    min-width: 1355px;width: 1355px;margin:0 auto;
+  }
+  .aside{
+    left:$four_vw;
+  }
+  .section,.living-area{
+    width : $four_vw;
+  }
+  .screen{
+    width : $four_vw;
+    height: $four_vh;
+  }
+  .non-live-box .live-tab-content{
+    height:$four_ph;
+  }
+  .non-live-box .channel_fm{
+    height:$four_fh;
+  }
+  .channel item{
+    font-size:16px;
+  }
+  .fm  .name{
+    font-size:14px;    left: 37%;
+  }
+  .channel_fm .logo {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media(min-width:$three_1440+ 1 ){
+  .non-live-box{
+    min-width: 1559px;
+  }
+}
+
+
+
+
+@media (max-width: $three_1440) {
+  .play-rc-pack .non-live-box{
+    min-width: 1115px;width: 1115px;margin:0 auto;
+  }
+  .aside{
+    left:$three_vw;
+  }
+  .section,.living-area{
+    width : $three_vw;
+  }
+  .screen{
+    width : $three_vw;
+    height: $three_vh;
+  }
+  .non-live-box .live-tab-content{
+    height:$three_ph;
+  }
+  .non-live-box .channel_fm{
+    height:$three_fh;
+  }
+}
+
+@media(min-width:$two_1180+ 1 ){
+  .non-live-box{
+    min-width: 1319px;
+  }
+}
+
+
+
+
+
+@media (max-width: $two_1180) {
+  .play-rc-pack .non-live-box{
+    min-width: 960px;width: 960px;margin:0 auto;
+  }
+  .aside{
+    left:$two_vw;
+  }
+  .section,.living-area{
+    width : $two_vw;
+  }
+  .screen{
+    width : $two_vw;
+    height: $two_vh;
+  }
+  .non-live-box .live-tab-content{
+    height:$two_ph;
+  }
+  .non-live-box .channel_fm{
+    height:$two_fh;
+  }
+  .non-live-box{
+    min-width: 1164px;
+  }
+}
+
+
+$one_980:980px;
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,209 @@
+@charset "utf-8";
+/* CSS Document */
+html{ overflow-x:hidden;}
+body {font:18px/1.5  Helvetica, Arial, Verdana, sans-serif;}
+.live-tab-content .wrapper .intro{
+    font-size: 12px;
+    margin-left: 10px;
+}
+i.live-btn.left, i.yg-btn.left,i.end-btn.left {
+    display: block;
+    margin: 25px 0px 16px 30px;
+    width: 40px;
+    height: 20px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.aside{
+    right: 0px;    width: 356px;
+}
+.live-tabs{
+    width: 297px;
+}
+.videoHuiguImg{
+    display: none;
+}
+.tabcon .videoHuiguTxt{
+    margin-left: 10px;
+    font-size: 14px;    line-height: 25px;
+}
+.date-box{
+    width: 287px;
+}
+.date-box div{
+    width: 41px;
+}
+.boxW{background: none;}
+.liveBox{ width:970px; margin:0 auto; text-align:left; padding:10px 0;}
+.video{width: 673px; height:423px; overflow:hidden; background:#000;}
+#livediv{ width:100%; height:100%;}
+#player1,#player2{  width:100%; height:100%;}
+.videoFlow{ width:297px; height:423px; }
+.tabBox{ height:360px; padding-bottom:10px;}
+.live-box .tabcon{ height:470px;}
+.non-live-box .tabcon{ height: 345px;}
+.videoListBox{ height:423px; overflow:hidden;}
+.ScrollBox{ width:970px; }
+.ScrollBox .bd3{ margin:0 23px; width:924px;}
+.ScrollBox .bd3 ul li{ width:211px; margin:0 10px;}
+.ScrollBox .bd3 ul.reComList dd p{ padding:0 10px;}
+.game-head .support-btn {
+    margin: 18px 20px 16px 20px;
+    width: 41px;
+    height: 41px;
+    background: center center/41px 41px no-repeat;
+    cursor: pointer;
+}
+
+.game-head .thumb-container{
+    width: 78px;
+}
+.live-Interaction .program-title{
+    font-size: 14px;
+}
+.game-head .badge {
+    font-size: 20px;
+    padding: 0 160px 0 78px;
+}
+.game-head .time {
+    font-size: 12px;margin-top: 10px;
+}
+.game-head .badge i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(../images/clock.png) center center/12px 12px no-repeat;
+}
+.live-tab-content{
+    height: 470px;
+}
+
+.copyright{
+    margin-right: 0px;
+}
+.live-tab-content #jmyg .live-program.inner {
+    margin: 0 20px 0px 10px;
+}
+.game-head .live-btn {
+    display: block;
+    margin: 24px 14px 16px 14px;
+    width: 50px;
+    height: 25px;
+    background: url(http://skin.kankanews.com/v6/images/live/live_icon.png) top center no-repeat;
+    background-size: 100%;
+}
+/*-----页脚-----*/
+.footer{ display: none;}
+.weixin-cen{ display:none;}
+.banner_ads_hide{ line-height:0;}
+
+.section{
+    float: left;
+    display: inline;
+    margin-right: 0px;
+    width: 673px !important;min-width: 673px!important;
+}
+.live-box,.non-live-box{
+    width: 970px;margin: 0 auto;
+}
+.aside {
+    position: relative;top: 0;
+    width: 297px;
+    float: right;
+    display: inline;
+}
+
+.header .header-content {
+    min-width: 730px !important;
+}
+
+.header .menu {
+    margin-left: 25px;
+}
+.header .menu a {
+    padding: 0 5px;
+}
+
+.boxW{
+    padding: 0px 5px 5px 5px;
+    margin-top: 9px;
+}
+
+@media (max-width: 768px) {
+    #zbLiu .videoHuiguTxt span, #ygLiu .videoHuiguTxt span{
+        right: 4px;
+    }
+    i.live-btn.left, i.yg-btn.left, i.end-btn.left{
+        margin: 25px 0px 16px 15px;
+    }
+    .game-head .badge{
+        padding: 0 160px 0 70px;
+    }
+    .imgBox .text {
+        font-size: 20px;
+    }
+    .imgBox .count {
+        font-size: 34px;
+        margin-top: 30%;
+    }
+    .live-Interaction .program-title{
+        padding: 0px 10px;
+    }
+    .boxW {
+        margin-top: 5px;
+    }
+    .section{
+        float: left;
+        display: inline;
+        margin-right: 0px;
+        width: 508px !important;min-width: 508px!important;
+    }
+    .live-box,.non-live-box{
+        width: 728px;    margin: 0 auto;
+    }
+    .aside {
+        position: relative;top: 0;
+        width: 220px;
+        float: right;
+        display: inline;
+    }
+    .live-tabs {
+        width: 220px;
+    }
+    .video{ width:508px; height:330px;}
+    .livediv{ width: 508px; margin: 0 auto;}
+    #player1,#player2{ width: 508px;}
+    .videoFlow{ width:220px; height:330px; }
+    .tabBox{ height:267px; padding-bottom: 10px;}
+    .live-box .tabcon{ height:380px;}
+    .videoListBox{ height:330px;}
+    .ScrollBox{ width:728px; }
+    .ScrollBox .bd3{ margin:0 24px; width:680px;}
+    .ScrollBox .bd3 ul li{ width:150px; margin:0 10px;}
+    .non-live-box .tabcon {
+        height: 254px;
+    }
+    .date-box {
+        width: 210px;
+    }
+    .date-box div {
+        width: 30px;
+    }
+    .program-title{
+        padding: 0px 10px;
+    }
+    .live-tab-content .inner{
+        padding: 0px 10px;
+    }
+    .date-box p.date {
+        font-size: 18px;
+    }
+    .live-tab-content #jmyg .live-program.inner {
+        margin: 0 10px 0px 5px;
+    }
+    .live-tab-content #jmyg .inner{
+        margin: 0 10px;
+    }
+}
