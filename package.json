@@ -5,6 +5,7 @@
   "main": "app/index.jsx",
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --progress --history-api-fallback",
+    "livedev": "./node_modules/.bin/webpack-dev-server --progress --history-api-fallback --config webpack.live.config.js",
     "build": "./node_modules/.bin/webpack --progress --colors --config webpack.prod.config.js",
     "lint": "./node_modules/.bin/eslint app",
     "clean": "rm -rf build/*",
@@ -51,7 +52,8 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.4.1",
-    "reactfire": "^1.0.0"
+    "reactfire": "^1.0.0",
+    "sass-loader": "^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.2",

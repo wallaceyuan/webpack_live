@@ -46,7 +46,7 @@ module.exports = {
       index: [
         'webpack/hot/dev-server',
         'webpack-dev-server/client?http://localhost:8080',
-        path.resolve(__dirname, 'app/hk.js')
+        path.resolve(__dirname, 'app/live.js')
       ]
     },
     output: {
@@ -103,7 +103,7 @@ module.exports = {
       new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
       new HtmlWebpackPlugin({
         title: 'your app title',
-        template: './demo/hk.html'
+        template: './demo/live.html'
       }),
       new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
       new ExtractTextPlugin("main.css", {

@@ -1,6 +1,6 @@
 var liveBox=[1,0,'k'];
 var b = {
-    now:now,
+  now:now,
 	live:"",
 	catchup:"",
 	timeObj :[],
@@ -10,8 +10,7 @@ var b = {
 	dayDate:'',
 	dayflag:1,
 	change:false,
-	paras:"",
-    hkId:hkId,
+  hkId:hkId,
 	channel:800+hkId,
 	liveInit:function(){
 		$.ajax({type:"OPTIONS",url:"/",complete:function(x) {
@@ -152,26 +151,26 @@ var b = {
 			b.hkInit();
 		});*/
 	},
-    hkChannelInit:function(){
-        var tv = channel.tv;
-        var fm = channel.fm;
-        var str1 = "";
-        var str2 = "";
-        for(var key in channel['tv']){
-            str1+='<li id="' + channel['tv'][key].id + '" data-time="' + channel['tv'][key].date + '"><div class="logo"><img src="'+ channel['tv'][key].titlepic +'" /></div><p class="name">'+ channel['tv'][key].catename +'</p></li>'
-        }
-        for(var key in channel['fm']){
-            str2+='<li id="'+ channel['fm'][key].id +'"><div class="logo"><img src="'+ channel['fm'][key].titlepic +'" /></div><p class="name">'+ channel['fm'][key].catename +'</p></li>'
-        }
-        $(".channel").append(str1);
-        $(".fm").append(str2);
-        $(".channel li").first().addClass('cur');
-    },
+  hkChannelInit:function(){
+      var tv = channel.tv;
+      var fm = channel.fm;
+      var str1 = "";
+      var str2 = "";
+      for(var key in channel['tv']){
+          str1+='<li id="' + channel['tv'][key].id + '" data-time="' + channel['tv'][key].date + '"><div class="logo"><img src="'+ channel['tv'][key].titlepic +'" /></div><p class="name">'+ channel['tv'][key].catename +'</p></li>'
+      }
+      for(var key in channel['fm']){
+          str2+='<li id="'+ channel['fm'][key].id +'"><div class="logo"><img src="'+ channel['fm'][key].titlepic +'" /></div><p class="name">'+ channel['fm'][key].catename +'</p></li>'
+      }
+      $(".channel").append(str1);
+      $(".fm").append(str2);
+      $(".channel li").first().addClass('cur');
+  },
 	hkInit:function(list){
 		var list = list || '';
 		$.ajax({
 			//'m.kankanews.com/web/fakeESI?module=catchUP&info=84_2016-03-16&jsoncallback=23'
-		url: 'http://m.kankanews.com/web/fakeESI?module=catchUP&info='+b.hkId+'_' + b.today + '&jsoncallback=?',
+  		url: 'http://m.kankanews.com/web/fakeESI?module=catchUP&info='+b.hkId+'_' + b.today + '&jsoncallback=?',
 			dataType: "json",
 			success: function (data) {
 				//console.log('http://api.app.kankanews.com/kankan/v5/livePC/stream/catchup/info/'+hkId+'_' + b.today + '/?jsoncallback=?');
@@ -253,7 +252,7 @@ var b = {
 						hkpadStream(judge,b.timeObj);
 					}else{
 						if(b.now == 'gb'){
-                            console.log('gbimg');
+              console.log('gbimg');
 							var palyer = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="player1" id="player1"> <param name="movie" value="http://player.kksmg.com/data/player_swf/KKPlayer.swf"> <param name="flashvars" value="playerId=2969363206&cover=http://static.statickksmg.com/image/2015/08/21/a275ba1d57da791b9b45d6498e8db01f.jpg&liveChannelID='+b.channel+'"> <param name="allowFullScreen" value="true"> <param name="wmode" value="transparent"> <param name="allowscriptaccess" value="always"> <embed src="http://player.kksmg.com/data/player_swf/KKPlayer.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" name="player2" id="player2" flashvars="playerId=2969363206&cover=http://static.statickksmg.com/image/2015/08/21/a275ba1d57da791b9b45d6498e8db01f.jpg&liveChannelID='+b.channel+'"> </object>';
 						}else{
 							var palyer = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="player1" id="player1"> <param name="movie" value="http://player.kksmg.com/data/player_swf/KKPlayer.swf"> <param name="flashvars" value="playerId=2969363206&liveChannelID='+b.channel+'"> <param name="allowFullScreen" value="true"> <param name="wmode" value="transparent"> <param name="allowscriptaccess" value="always"> <embed src="http://player.kksmg.com/data/player_swf/KKPlayer.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" name="player2" id="player2" flashvars="playerId=2969363206&liveChannelID='+b.channel+'"> </object>';
@@ -276,33 +275,30 @@ var b = {
 		});
 	},
 	hkClick:function(){
-		$(document).on("click",".date-box div",function(){
-			var divDate = $(this).attr('date');b.today = divDate;
-			b.dayflag = $(this).attr('did');
-			b.change = true;
-			b.hkInit();
-			$('.date-box div').removeClass('active');
-			$(this).addClass('active');
-		});
-        $(document).on("click",".channel li",function(){
-            b.now = 'hk';
-            channelChange.apply(this);
-        });
-        $(document).on("click",".fm li",function(){
-            b.now = 'gb';
-            channelChange.apply(this);
-        });
-
-        function channelChange(){
-            var divDate = $(this).attr('id');
-            console.log(divDate);
-            b.hkId = divDate;
-            b.hkInit();
-            liveBox=[1,0,'k'];
-            $('.item li').removeClass('cur');
-            $(this).addClass('cur');
-        }
-		/*»Ø¿´µã»÷ÇÐ»»*/
+    $(document).on("click",".date-box div",function(){
+      var divDate = $(this).attr('date');b.today = divDate;
+      b.dayflag = $(this).attr('did');
+      b.change = true;
+      b.hkInit();
+      $('.date-box div').removeClass('active');
+      $(this).addClass('active');
+    });
+    $(document).on("click",".channel li",function(){
+        b.now = 'hk';
+        channelChange.apply(this);
+    });
+    $(document).on("click",".fm li",function(){
+        b.now = 'gb';
+        channelChange.apply(this);
+    });
+    function channelChange(){
+        var divDate = $(this).attr('id');
+        b.hkId = divDate;
+        b.hkInit();
+        liveBox=[1,0,'k'];
+        $('.item li').removeClass('cur');
+        $(this).addClass('cur');
+    }
 		$(document).on("click",".hk",function(){
 			$('.time-program').removeClass('on');
 			$(this).addClass('on');

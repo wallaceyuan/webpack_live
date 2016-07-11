@@ -19,7 +19,7 @@ $five_ph:$five_vh + 90 - $dateBox;
 $five_fh:$five_vh + 20 - $itemHeight;
 
 
-$four_1680:1680px;$four_W:1650px;$four_vw:1075px;$four_vh:$four_vw *9 /16 + 45;
+$four_1680:1700px;$four_W:1650px;$four_vw:1075px;$four_vh:$four_vw *9 /16 + 45;
 $four_ph:$four_vh + 90 - $dateBox;
 $four_fh:$four_vh + 20 - $itemHeight;
 
@@ -31,25 +31,137 @@ $two_1180:1180px;$two_W:1150px;$two_vw:680px;$two_vh:$two_vw *9 /16;
 $two_ph:$two_vh + 90 - $dateBox;
 $two_fh:$two_vh + 20 - $itemHeight;
 
-.aside{
+$one_980:980px;
+
+.kkpage-1920 .play-rc-pack .non-live-box{
+  min-width: 1595px;width: 1595px;margin:0 auto;
+}
+.kkpage-1920 .aside{
+  left:$five_vw;
+}
+.kkpage-1920 .section,.kkpage-1680 .living-area{
+  width : $five_vw;
+}
+.kkpage-1920 .screen{
+  width : $five_vw;
+  height: $five_vh;
+}
+.kkpage-1920 .non-live-box .live-tab-content{
+  height:$five_ph;
+}
+.kkpage-1920 .non-live-box .channel_fm{
+  height:$five_fh;
+}
+
+
+
+.kkpage-1680 .play-rc-pack .non-live-box{
+  min-width: 1355px;width: 1355px;margin:0 auto;
+}
+.kkpage-1680 .aside{
+  left:$four_vw;
+}
+.kkpage-1680 .section,.kkpage-1680 .living-area{
+  width : $four_vw;
+}
+.kkpage-1680 .screen{
+  width : $four_vw;
+  height: $four_vh;
+}
+.kkpage-1680 .non-live-box .live-tab-content{
+  height:$four_ph;
+}
+.kkpage-1680 .non-live-box .channel_fm{
+  height:$four_fh;
+}
+.kkpage-1680 .channel .item{
+  font-size:16px;
+}
+.kkpage-1680 .fm  .name{
+  font-size:14px;    left: 37%;
+}
+.channel_fm .logo {
+  width: 45px;
+  height: 45px;
+}
+
+
+.kkpage-1440 .play-rc-pack .non-live-box{
+  min-width: 1115px;width: 1115px;margin:0 auto;
+}
+.kkpage-1440 .aside{
   left:$three_vw;
 }
-.section,.living-area{
+.kkpage-1440 .section,.kkpage-1440 .living-area{
   width : $three_vw;
 }
-.screen{
+.kkpage-1440 .screen{
   width : $three_vw;
   height: $three_vh;
 }
-.non-live-box .live-tab-content{
+.kkpage-1440 .non-live-box .live-tab-content{
   height:$three_ph;
 }
-.non-live-box .channel_fm{
+.kkpage-1440 .non-live-box .channel_fm{
   height:$three_fh;
 }
 
+.kkpage-1180 .play-rc-pack .non-live-box{
+  min-width: 960px;width: 960px;margin:0 auto;
+}
+.kkpage-1180 .aside{
+  left:$two_vw;
+}
+.kkpage-1180 .section,.kkpage-1180 .living-area{
+  width : $two_vw;
+}
+.kkpage-1180 .screen{
+  width : $two_vw;
+  height: $two_vh;
+}
+.kkpage-1180 .non-live-box .live-tab-content{
+  height:$two_ph;
+}
+.kkpage-1180 .non-live-box .channel_fm{
+  height:$two_fh;
+}
+.kkpage-1180 .non-live-box{
+  min-width: 1164px;
+}
 
 
+.kkpage-980 .aside{
+  left:$three_vw;
+}
+.kkpage-980 .section,.kkpage-980 .living-area{
+  width : $three_vw;
+}
+.kkpage-980 .screen{
+  width : $three_vw;
+  height: $three_vh;
+}
+.kkpage-980 .non-live-box .live-tab-content{
+  height:$three_ph;
+}
+.kkpage-980 .non-live-box .channel_fm{
+  height:$three_fh;
+}
+
+@media(min-width:$two_1180+ 1 ){
+  .non-live-box{
+    min-width: 1319px;
+  }
+}
+@media(min-width:$three_1440+ 1 ){
+  .non-live-box{
+    min-width: 1559px;
+  }
+}
+@media(min-width:$four_1680+ 1 ){
+  .non-live-box{
+    min-width: 1559px;
+  }
+}
 
 @media (min-width: $five_1920) {
   .aside{
@@ -69,6 +181,9 @@ $two_fh:$two_vh + 20 - $itemHeight;
     height:$five_fh;
   }
 }
+
+
+
 @media (max-width: $five_1920) {
   .play-rc-pack .non-live-box{
     min-width: 1595px;width: 1595px;margin:0 auto;
@@ -90,13 +205,6 @@ $two_fh:$two_vh + 20 - $itemHeight;
     height:$five_fh;
   }
 }
-@media(min-width:$four_1680+ 1 ){
-  .non-live-box{
-    min-width: 1559px;
-  }
-}
-
-
 
 @media (max-width: $four_1680) {
   .play-rc-pack .non-live-box{
@@ -129,14 +237,6 @@ $two_fh:$two_vh + 20 - $itemHeight;
     height: 45px;
   }
 }
-@media(min-width:$three_1440+ 1 ){
-  .non-live-box{
-    min-width: 1559px;
-  }
-}
-
-
-
 
 @media (max-width: $three_1440) {
   .play-rc-pack .non-live-box{
@@ -159,16 +259,6 @@ $two_fh:$two_vh + 20 - $itemHeight;
     height:$three_fh;
   }
 }
-
-@media(min-width:$two_1180+ 1 ){
-  .non-live-box{
-    min-width: 1319px;
-  }
-}
-
-
-
-
 
 @media (max-width: $two_1180) {
   .play-rc-pack .non-live-box{
@@ -194,16 +284,3 @@ $two_fh:$two_vh + 20 - $itemHeight;
     min-width: 1164px;
   }
 }
-
-
-$one_980:980px;
-
-
-
-
-
-
-
-
-
-

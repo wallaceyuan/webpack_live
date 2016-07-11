@@ -16,21 +16,22 @@ module.exports = {
 		this.hkLiveWidth();
 	},
 	zbLiveWidth:function(){
+    this.widthJudge();
 		//console.log('zbLiveWidth');
 		var d = navigator.userAgent.indexOf("MSIE 8") > -1 || navigator.userAgent.indexOf("MSIE 7") > -1;
 		var p = this.isIPad();
 		var e = $(".live-box .section").width(),
 			t = parseInt(9 * e / 16)+45;
-		$(".screen embed, .screen object").css({
+/*		$(".screen embed, .screen object").css({
 			width: e,
 			height: t
-		}), $(".screen").height(t);
+		}), $(".screen").height(t);*/
 		var h = $('.live-box .section').height();
 		var i = $(window).height();
         if(p){
-            $(".live-box .live-Interaction").height(h),$(".live-box .live-tab-content").height(h- 38)
+            //$(".live-box .live-Interaction").height(h),$(".live-box .live-tab-content").height(h- 38)
         }else{
-            $(".live-box .live-Interaction").height(i - 78), $(".live-box .live-tab-content").height(i - 78 - 38 -10).css('padding-bottom','10px')
+/*            $(".live-box .live-Interaction").height(i - 78), $(".live-box .live-tab-content").height(i - 110- 38 -10).css('padding-bottom','10px')*/
         }
 		$("#mod-comment").height(i - 255),d && ($(window).width() < 1180 ? ($(".section").css("margin-right", 0), $(".aside").css("display", "none")) : ($(".section").css("margin-right", "426"), $(".aside").css("display", "block")))
 	},
@@ -41,42 +42,62 @@ module.exports = {
 		var c_w = $(window).width();
 		var video_w = c_w -575-30;
 		var e = video_w,
-			t = parseInt(9 * e / 16)+45;
+    t = parseInt(9 * e / 16)+45;
 		var h = $('.non-live-box .section').height();
-        if(p){
-            $(".non-live-box .live-Interaction").height(h),$(".non-live-box .live-tab-content").height(h - 38-47)
-        }
-        if(d){
-            $('.non-live-box').width('1319px');
-        }
-
-        $('.listcontrol-btn').on('click',function(){
-        	if($('body').hasClass('play-rc-pack')){
-        		$('body').removeClass('play-rc-pack');
-        	}else{
-        		$('body').addClass('play-rc-pack');
-        	}
-        });
+    if(p){
+        $(".non-live-box .live-Interaction").height(h),$(".non-live-box .live-tab-content").height(h - 38-47)
+    }
+    if(d){
+        $('.non-live-box').width('1319px');
+        this.widthJudge();
+    }
+    $('.listcontrol-btn').on('click',function(){
+    	if($('body').hasClass('play-rc-pack')){
+    		$('body').removeClass('play-rc-pack');
+    	}else{
+    		$('body').addClass('play-rc-pack');
+    	}
+    });
 	},
-    widthJudge:function(){
-        var c_w = $(window).width();
-        if(c_w<1920){
-            b.widthClass = 'kkpage-1920';
-        }
-        if(c_w<1680){
-            b. widthClass = 'kkpage-1680';
-        }
-        if(c_w<1440){
-            b.widthClass = 'kkpage-1440';
-        }
-        if(c_w<1180){
-            b.widthClass = 'kkpage-1180';
-        }
-        if(c_w<980){
-            b.widthClass = 'kkpage-980';
-        }
-        $('body').addClass(b.widthClass);
-    },
+  widthJudgeLive:function(){
+      var c_w = $(window).width();
+      $('body').removeClass(b.widthClass);
+      if(c_w<1920){
+          b.widthClass = 'kkpage-1920';
+      }
+      if(c_w<1680){
+          b. widthClass = 'kkpage-1680';
+      }
+      if(c_w<1440){
+          b.widthClass = 'kkpage-1440';
+      }
+      if(c_w<1180){
+          b.widthClass = 'kkpage-1180';
+      }
+      if(c_w<980){
+          b.widthClass = 'kkpage-980';
+      }
+      $('body').addClass(b.widthClass);
+  },
+  widthJudge:function(){
+      var c_w = $(window).width();
+      if(c_w<1920){
+          b.widthClass = 'kkpage-1920';
+      }
+      if(c_w<1680){
+          b. widthClass = 'kkpage-1680';
+      }
+      if(c_w<1440){
+          b.widthClass = 'kkpage-1440';
+      }
+      if(c_w<1180){
+          b.widthClass = 'kkpage-1180';
+      }
+      if(c_w<980){
+          b.widthClass = 'kkpage-980';
+      }
+      $('body').addClass(b.widthClass);
+  },
 	share:function (shareinfo){
 		var title=shareinfo.title;
 		var url=shareinfo.url;
