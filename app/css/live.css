@@ -1,6 +1,6 @@
 body.game-page.in-live,body.game-page.in-hk {padding-top: 40px;}
 body.game-page.loaded {
-  background: #000 url(/app/images/live-index.jpg) no-repeat;
+  background: #000 url(../images/live-index.jpg) no-repeat;
 }
 video{
     width: 100%;
@@ -31,7 +31,7 @@ body.in-live .header,body.in-hk .header  {
 
 .header{position:relative;z-index:3000;margin-bottom:22px;width:100%;}
 .page-bg{position:fixed;top:0;left:0;z-index:-1;width:100%;height:100%;}
-.game-header.has-video .game-info-container{background-image:url(/app/images/alpha-07_1ffd3f.png);}
+.game-header.has-video .game-info-container{background-image:url(../images/alpha-07_1ffd3f.png);}
 .game-head{overflow:hidden;width:100%;min-height:91px !important;color:#fff;text-align:center;font-size:22px;}
 .game-head .thumb-container{width:111px;min-height:91px!important;
     position:absolute;top:0px;left: 0px;}
@@ -67,7 +67,7 @@ i.end-btn.left{
     left: 0px;
     width: 100%;
 }
-.game-head .badge i{display:inline-block;width:14px;height:14px;background:url(/app/images/clock.png) center center/14px 14px no-repeat;}
+.game-head .badge i{display:inline-block;width:14px;height:14px;background:url(../images/clock.png) center center/14px 14px no-repeat;}
 .game-head .time{margin-top:12px;text-align:left;font-size:14px;line-height:14px;}
 .game-head .time span{display:inline-block;margin-left:8px;}
 .game-head .time span.end{
@@ -81,14 +81,16 @@ i.end-btn.left{
     float: left;display: inline-block;margin-left: 30px;
 }
 .live-Interaction .title,.live-Interaction .live-tab-content,.boxW{
-    background-image:url(/app/images/alpha-07_1ffd3f.png);
+    background-image:url(../images/alpha-07_1ffd3f.png);
 }
 .boxW{
     padding: 5px 5px 5px 5px;
 }
 .living-area{
     text-align: left;
+/*
     background: #000;
+*/
 }
 
 /*.section,.copyright{margin-right:399px;min-width:686px !important;}
@@ -110,8 +112,10 @@ i.end-btn.left{
 .live-tabs{position:relative;width:393px;height:38px;color:#fff;}
 .live-tabs h3{float:left;height:38px;color:#fff;text-align:center;font-size:18px;line-height:38px;cursor:pointer;box-sizing: border-box;}
 .live-tabs .line{width:100%;height:2px;}
-.live-tabs h3.active{background-image:url(/app/images/alpha-07_1fffff.png);}
-.live-tabs h3{background-image:url(/app/images/alpha-07_1ffd3f.png);}
+/*
+.live-tabs h3.active{background-image:url(../app/images/alpha-07_1fffff.png);}
+*/
+.live-tabs h3{background-image:url(../images/alpha-07_1ffd3f.png);}
 .live-tabs h3.active .line{background:#e63c2e;}
 .live-tabs h3.other{border-bottom:1px solid #20646b;border-left:1px solid #20646b;}
 /*.live-tabs{
@@ -120,11 +124,11 @@ i.end-btn.left{
 /*右侧切换*/
 
 .live-tabs{
-    background-image: url(/app/images/alpha-07_1ffd3f.png);
+    background-image: url(../images/alpha-07_1ffd3f.png);
 }
 
 div.live-tabs h3:first-child{border-left:none;}
-div.live-tabs h3:last-child{border-right:none;    background: url(/app/images/alpha-03_1fffff.png);}
+div.live-tabs h3:last-child{border-right:none;    background: url(../images/alpha-03_1fffff.png);}
 .live-tabs h3.live-tabs-current{border-top:2px solid #c72b1e;border-right:1px solid #206970;border-bottom:1px solid transparent;border-left:1px solid #206970;background:0 0;color:#fff;}
 .live-tabs-width3{width:33%;}
 .live-tabs-width2{width:49.8%;}
@@ -134,9 +138,9 @@ div.live-tabs h3:last-child{border-right:none;    background: url(/app/images/al
 
 
 /*右侧时间选择*/
-.date-box{width:383px;background-image:url(/app/images/alpha-01_1fffff.png);text-align: center;}
+.date-box{width:383px;background-image:url(../images/alpha-01_1fffff.png);text-align: center;}
 .date-box div{color:#fff;float:left;display:inline-block;padding-top:16px;padding-bottom:16px;width:54px;height:39px;cursor: pointer;}
-.date-box div.active{background:url(/app/images/alpha-02_1fffff.png);color: #ff0000;}
+.date-box div.active{background:url(../images/alpha-02_1fffff.png);color: #ff0000;}
 .date-box p.week{font-size:12px;line-height:12px;}
 .date-box p.date{padding-top:6px;font-size:24px;line-height:24px;}
 
@@ -166,7 +170,7 @@ div.live-tabs h3:last-child{border-right:none;    background: url(/app/images/al
 }
 .live-tab-content .inner.on em{display:inline-block;}
 .live-tab-content .inner.dateout{color:#BBB;}
-.live-tab-content .inner.on{background:url(/app/images/alpha-03_1fffff.png);}
+.live-tab-content .inner.on{background:url(../images/alpha-03_1fffff.png);}
 
 #zbLiu .videoHuiguTxt span,#ygLiu .videoHuiguTxt span{
     font-style: normal;
@@ -184,7 +188,7 @@ div.live-tabs h3:last-child{border-right:none;    background: url(/app/images/al
 
 /*直播列表*/
 .tabcon h3.zbIcon {
-    background: url(/app/images/red_dot.png) no-repeat 7px center;
+    background: url(../images/red_dot.png) no-repeat 7px center;
 }
 .tabcon h3 {
     color: #fff;
@@ -194,7 +198,7 @@ div.live-tabs h3:last-child{border-right:none;    background: url(/app/images/al
     margin: 6px 0 2px 0;
 }
 .tabcon h3.ygIcon {
-    background: url(/app/images/blue_dot.png) no-repeat 7px center;
+    background: url(../images/blue_dot.png) no-repeat 7px center;
 }
 .tabBox h3 {
     color: #fff;
@@ -292,10 +296,10 @@ div.live-tabs h3:last-child{border-right:none;    background: url(/app/images/al
     z-index: 2;display: block;height: 100%;width: 100%;
 }
 .live-tab-content #jmyg .wrapper:hover {
-    background-image: url(/app/images/alpha-07_1ffd3f.png);
+    background-image: url(../images/alpha-07_1ffd3f.png);
 }
 .live-tab-content #jmyg .wrapper.now{
-    background-image: url(/app/images/alpha-07_1ffd3f.png);
+    background-image: url(../images/alpha-07_1ffd3f.png);
 }
 .liveShare {
     position: absolute;
@@ -418,7 +422,7 @@ div.live-tabs h3:last-child{border-right:none;    background: url(/app/images/al
     top: 0;
     width: 24px;
     height: 22px;
-    background: url(/app/images/search.png) no-repeat;
+    background: url(../images/search.png) no-repeat;
     cursor: pointer;
 }
 

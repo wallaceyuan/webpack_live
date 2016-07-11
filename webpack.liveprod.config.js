@@ -13,7 +13,7 @@ module.exports = {
       path.resolve(__dirname, 'app/live.js')
     ],
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'live'),
 /*
         filename: "[name].[hash:8].js",
 */
@@ -47,7 +47,7 @@ module.exports = {
         },
         {
           test: /\.(png|jpg)$/,
-          loader: 'url?limit=8192'
+          loader: 'url?limit=8192&name=/images/[name].[ext]'
         },
         {
           test: /\.(woff|woff2|ttf|svg|eot)(\?v=\d+\.\d+\.\d+)?$/,

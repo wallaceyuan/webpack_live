@@ -47,7 +47,7 @@ module.exports = {
         },
         {
           test: /\.(png|jpg)$/,
-          loader: 'url?limit=8192'
+          loader: 'url?limit=8192&name=/images/[name].[ext]'
         },
         {
           test: /\.(woff|woff2|ttf|svg|eot)(\?v=\d+\.\d+\.\d+)?$/,
@@ -60,7 +60,7 @@ module.exports = {
           allChunks: true,
           disable: false
       }),*/
-      new ExtractTextPlugin("main.css", {
+      new ExtractTextPlugin("live.css", {
         allChunks: true,
         disable: false
       }),
@@ -79,7 +79,7 @@ module.exports = {
           warnings: false
         }
       }),
-      // 查找相等或近似的模块，避免在�?终生成的文件中出现重复的模块
+      // 查找相等或近似的模块，避免在�?终生成的文件中出现重复的模块
       new webpack.optimize.DedupePlugin(),
       // 按引用频度来排序 ID，以便达到减少文件大小的效果
       new webpack.optimize.OccurenceOrderPlugin(),

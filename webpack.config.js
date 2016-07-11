@@ -88,7 +88,7 @@ module.exports = {
         },
         {
           test: /\.(png|jpg)$/,
-          loader: 'url?limit=8192'
+          loader: 'url?limit=8192&name=app/images/[name].[ext]'
         },
         {
           test: /\.(woff|woff2|ttf|svg|eot)(\?v=\d+\.\d+\.\d+)?$/,
@@ -106,7 +106,7 @@ module.exports = {
         template: './demo/hk.html'
       }),
       new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
-      new ExtractTextPlugin("main.css", {
+      new ExtractTextPlugin("./build/main.css", {
           allChunks: true,
           disable: false
       }),

@@ -88,7 +88,7 @@ module.exports = {
         },
         {
           test: /\.(png|jpg)$/,
-          loader: 'url?limit=8192'
+          loader: 'url?limit=8192&name=app/images/[name].[ext]'
         },
         {
           test: /\.(woff|woff2|ttf|svg|eot)(\?v=\d+\.\d+\.\d+)?$/,
