@@ -7,6 +7,7 @@
     "dev": "./node_modules/.bin/webpack-dev-server --progress --history-api-fallback",
     "livedev": "./node_modules/.bin/webpack-dev-server --progress --history-api-fallback --config webpack.live.config.js",
     "build": "./node_modules/.bin/webpack --progress --colors --config webpack.prod.config.js",
+    "livebuild": "./node_modules/.bin/webpack --progress --colors --config webpack.liveprod.config.js",
     "lint": "./node_modules/.bin/eslint app",
     "clean": "rm -rf build/*",
     "test": "./node_modules/.bin/mocha --recursive --compilers js:babel-core/register --require ./test/setup.js",

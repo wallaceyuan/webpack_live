@@ -33,7 +33,7 @@ module.exports = {
         }else{
 /*            $(".live-box .live-Interaction").height(i - 78), $(".live-box .live-tab-content").height(i - 110- 38 -10).css('padding-bottom','10px')*/
         }
-		$("#mod-comment").height(i - 255),d && ($(window).width() < 1180 ? ($(".section").css("margin-right", 0), $(".aside").css("display", "none")) : ($(".section").css("margin-right", "426"), $(".aside").css("display", "block")))
+		//$("#mod-comment").height(i - 255),d && ($(window).width() < 1180 ? ($(".section").css("margin-right", 0), $(".aside").css("display", "none")) : ($(".section").css("margin-right", "426"), $(".aside").css("display", "block")))
 	},
 	hkLiveWidth:function(){
 		var dateHeight = 75,itemHeight = 77;
@@ -61,12 +61,13 @@ module.exports = {
 	},
   widthJudgeLive:function(){
       var c_w = $(window).width();
+	  console.log(c_w);
       $('body').removeClass(b.widthClass);
       if(c_w<1920){
           b.widthClass = 'kkpage-1920';
       }
-      if(c_w<1680){
-          b. widthClass = 'kkpage-1680';
+      if(c_w<1700){
+          b.widthClass = 'kkpage-1680';
       }
       if(c_w<1440){
           b.widthClass = 'kkpage-1440';
@@ -84,8 +85,8 @@ module.exports = {
       if(c_w<1920){
           b.widthClass = 'kkpage-1920';
       }
-      if(c_w<1680){
-          b. widthClass = 'kkpage-1680';
+      if(c_w<1700){
+          b.widthClass = 'kkpage-1680';
       }
       if(c_w<1440){
           b.widthClass = 'kkpage-1440';
