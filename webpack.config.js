@@ -103,7 +103,7 @@ module.exports = {
       new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
       new HtmlWebpackPlugin({
         title: 'your app title',
-        template: './demo/hk.html'
+        template: './app/hk.html'
       }),
       new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
       new ExtractTextPlugin("./build/main.css", {

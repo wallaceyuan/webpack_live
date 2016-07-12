@@ -73,8 +73,8 @@ i.end-btn.left{background:#666;}
     /* border: 10px solid #1d1919; */
     border-top: none;
     border-bottom: none;
-    border-radius: 13px 13px 13px 13px;
-    background: #1d1919 url(../images/alpha_3.png);
+    border-radius: 8px;
+    background: #1d1919;
     position: relative;
 }
 .aside .program_all {
@@ -106,7 +106,7 @@ i.end-btn.left{background:#666;}
 .channel_fm .logo img{display:block;width:100%;}
 .channel_fm .item{display:none;}
 .channel_fm .item.cur{display:block;}
-.boxW,.live-Interaction .live-tab-content,.live-Interaction .title{background-image:url(../images/alpha_2.png);}
+.boxW,.live-Interaction .live-tab-content,.live-Interaction .title{background:#242424;}
 .living-area{background:#000;text-align:left;}
 .copyright{margin-right:575px;min-width:686px!important;}
 .section{float:left;display:inline-block;/*min-width:686px!important;*/}
@@ -270,7 +270,7 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
     width: 12px;
     height: 50px;
     margin-top: -25px;
-    background-color: #fff;
+    background-color: #313131;
     text-align: center;
     cursor: pointer;
 }
@@ -278,7 +278,10 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
     display: inline-block;
     width: 8px;
     height: 7px;
-    background: url(http://www.qiyipic.com/common/fix/v3-play/juji-list.png) no-repeat;
+    background: url(../images/juji-list.png) no-repeat;
+}
+.listcontrol-btn:hover .icn_right {
+    background-position: -20px 0;
 }
 .listcontrol-btn .icn_right {
     background-position: 0 0;
@@ -289,7 +292,9 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
     margin-left: -4px;
 }
 
-
+.play-rc-pack .listcontrol-btn{
+    display: none;
+}
 .copyright {
     font-size: 14px;
     padding-top: 10px;
@@ -342,12 +347,12 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
 .mCSB_outside+.mCSB_scrollTools{right:-26px}
 .mCS-dir-rtl>.mCSB_inside>.mCSB_scrollTools,.mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools{right:auto;left:0}
 .mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools{left:-26px}
-.mCSB_scrollTools .mCSB_draggerContainer{position:absolute;top:7px;right:0;bottom:7px;left:0;height:auto;border-radius:10px;background:#b8b8b8;}
+.mCSB_scrollTools .mCSB_draggerContainer{position:absolute;top:7px;right:0;bottom:7px;left:0;height:auto;border-radius:10px;background:#313131;}
 
 .mCSB_scrollTools a+.mCSB_draggerContainer{margin:20px 0}
 .mCSB_scrollTools .mCSB_draggerRail{width:2px;height:100%;margin:0 auto;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px}
 .mCSB_scrollTools .mCSB_dragger{cursor:pointer;width:100%;height:30px;z-index:1}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{position:relative;width:4px;height:100%;margin:0 auto;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px;text-align:center; background:#849b9f;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{position:relative;width:4px;height:100%;margin:0 auto;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px;text-align:center; background:#4e4e4e;}
 .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{width:12px}
 .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{width:8px}
 .mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown{display:block;position:absolute;height:20px;width:100%;overflow:hidden;margin:0 auto;cursor:pointer}
@@ -355,3 +360,56 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
 .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical,.mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical{right:0;margin:12px 0}
 .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.2);filter:"alpha(opacity=20)";-ms-filter:"alpha(opacity=20)"}
 .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.5);filter:"alpha(opacity=50)";-ms-filter:"alpha(opacity=50)";}
+
+
+
+.listcontrol-pack {
+    display: none;
+    position: absolute;
+    width: 16px;
+    height: 100%;
+    top: -5px;
+    right: -27px;
+    background-color: #353535;
+    text-align: center;
+    color: #999;
+}
+.play-rc-pack .listcontrol-pack{
+    display: block;
+}
+.listcontrol-pack a {
+     color: #999;
+     display: block;
+     height: 100%;
+ }
+.listcontrol-pack-con {
+    position: absolute;
+    width: 12px;
+    height: 70px;
+    top: 50%;
+    left: 0;
+    margin-top: -35px;
+}
+.listcontrol-pack .icn_left {
+    background-position: -40px 0;
+    position: absolute;
+    top: 0;
+    left: 4px;
+}
+.listcontrol-pack-txt {
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+    line-height: 14px;
+    font-size: 12px;
+}
+.listcontrol-pack-hover {
+    background-color: #424242;
+    color: #699f00;
+}
+.listcontrol-pack a:hover, .listcontrol-pack-hover a {
+    color: #699f00;
+}
+.listcontrol-pack-hover .icn_left {
+    background-position: -60px 0;
+}

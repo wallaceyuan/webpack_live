@@ -48,15 +48,26 @@ module.exports = {
         $(".non-live-box .live-Interaction").height(h),$(".non-live-box .live-tab-content").height(h - 38-47)
     }
     if(d){
-        $('.non-live-box').width('1319px');
+        //$('.non-live-box').width('1319px');
         this.widthJudge();
     }
+
+	$(".listcontrol-pack").hover(function(){
+		$(this).addClass('listcontrol-pack-hover');
+	},function(){
+		$(this).removeClass('listcontrol-pack-hover');
+	});
+
+/*	$('.listcontrol-pack').on('hover',function(){
+		$(this).addClass('listcontrol-pack-hover');
+	},function(){
+		$(this).removeClass('listcontrol-pack-hover');
+	});*/
+	$('.listcontrol-pack').on('click',function(){
+		$('body').removeClass('play-rc-pack');
+	});
     $('.listcontrol-btn').on('click',function(){
-    	if($('body').hasClass('play-rc-pack')){
-    		$('body').removeClass('play-rc-pack');
-    	}else{
-    		$('body').addClass('play-rc-pack');
-    	}
+		$('body').addClass('play-rc-pack');
     });
 	},
   widthJudgeLive:function(){

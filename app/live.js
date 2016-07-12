@@ -1,5 +1,7 @@
 import './css/live.css';
 import './css/live.scss';
+import './css/public.css';
+
 import videofc from './js/videofc.js';
 import videoInt from './js/videoInit.js';
 

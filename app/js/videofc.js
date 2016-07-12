@@ -10,8 +10,8 @@ var b = {
 	dayDate:'',
 	dayflag:1,
 	change:false,
-  hkId:hkId,
-	channel:800+hkId,
+    hkId:parseInt(hkId) < 100? '0'+hkId:hkId ,
+	channel:parseInt(hkId) < 100? 800 +'0'+hkId:800 +hkId,
 	liveInit:function(){
 		$.ajax({type:"OPTIONS",url:"/",complete:function(x) {
 			var time_stamp = Date.parse(x.getResponseHeader("Date"));
@@ -151,21 +151,21 @@ var b = {
 			b.hkInit();
 		});*/
 	},
-  hkChannelInit:function(){
-      var tv = channel.tv;
-      var fm = channel.fm;
-      var str1 = "";
-      var str2 = "";
-      for(var key in channel['tv']){
-          str1+='<li id="' + channel['tv'][key].id + '" data-time="' + channel['tv'][key].date + '"><div class="logo"><img src="'+ channel['tv'][key].titlepic +'" /></div><p class="name">'+ channel['tv'][key].catename +'</p></li>'
-      }
-      for(var key in channel['fm']){
-          str2+='<li id="'+ channel['fm'][key].id +'"><div class="logo"><img src="'+ channel['fm'][key].titlepic +'" /></div><p class="name">'+ channel['fm'][key].catename +'</p></li>'
-      }
-      $(".channel").append(str1);
-      $(".fm").append(str2);
-      $(".channel li").first().addClass('cur');
-  },
+  	hkChannelInit:function(){
+		var tv = channel.tv;
+		var fm = channel.fm;
+		var str1 = "";
+		var str2 = "";
+		for(var key in channel['tv']){
+			str1+='<li id="' + channel['tv'][key].id + '" data-time="' + channel['tv'][key].date + '"><div class="logo"><img src="'+ channel['tv'][key].titlepic +'" /></div><p class="name">'+ channel['tv'][key].catename +'</p></li>'
+		}
+		for(var key in channel['fm']){
+			str2+='<li id="'+ channel['fm'][key].id +'"><div class="logo"><img src="'+ channel['fm'][key].titlepic +'" /></div><p class="name">'+ channel['fm'][key].catename +'</p></li>'
+		}
+		$(".channel").append(str1);
+		$(".fm").append(str2);
+		$(".channel li").first().addClass('cur');
+  	},
 	hkInit:function(list){
 		var list = list || '';
 		$.ajax({
@@ -252,12 +252,13 @@ var b = {
 						hkpadStream(judge,b.timeObj);
 					}else{
 						if(b.now == 'gb'){
-              console.log('gbimg');
-							var palyer = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="player1" id="player1"> <param name="movie" value="http://player.kksmg.com/data/player_swf/KKPlayer.swf"> <param name="flashvars" value="playerId=2969363206&cover=http://static.statickksmg.com/image/2015/08/21/a275ba1d57da791b9b45d6498e8db01f.jpg&liveChannelID='+b.channel+'"> <param name="allowFullScreen" value="true"> <param name="wmode" value="transparent"> <param name="allowscriptaccess" value="always"> <embed src="http://player.kksmg.com/data/player_swf/KKPlayer.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" name="player2" id="player2" flashvars="playerId=2969363206&cover=http://static.statickksmg.com/image/2015/08/21/a275ba1d57da791b9b45d6498e8db01f.jpg&liveChannelID='+b.channel+'"> </object>';
+							var c = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="player1" id="player1"> <param name="movie" value="http://player.kksmg.com/data/player_swf/KKPlayer.swf"> <param name="flashvars" value="playerId=2969363206&cover=http://static.statickksmg.com/image/2015/08/21/a275ba1d57da791b9b45d6498e8db01f.jpg&liveChannelID='+b.channel+'"> <param name="allowFullScreen" value="true"> <param name="wmode" value="transparent"> <param name="allowscriptaccess" value="always"> <embed src="http://player.kksmg.com/data/player_swf/KKPlayer.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" name="player2" id="player2" flashvars="playerId=2969363206&cover=http://static.statickksmg.com/image/2015/08/21/a275ba1d57da791b9b45d6498e8db01f.jpg&liveChannelID='+b.channel+'"> </object>';
 						}else{
-							var palyer = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="player1" id="player1"> <param name="movie" value="http://player.kksmg.com/data/player_swf/KKPlayer.swf"> <param name="flashvars" value="playerId=2969363206&liveChannelID='+b.channel+'"> <param name="allowFullScreen" value="true"> <param name="wmode" value="transparent"> <param name="allowscriptaccess" value="always"> <embed src="http://player.kksmg.com/data/player_swf/KKPlayer.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" name="player2" id="player2" flashvars="playerId=2969363206&liveChannelID='+b.channel+'"> </object>';
+							var c = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" name="player1" id="player1"> ';
+							c += '<param name="movie" value="http://player.kksmg.com/data/player_swf/KKPlayer.swf">', c += '<param name="width" value="100%">', c += '<param name="height" value="100%">', c += '<param name="allowFullScreen" value="true">', c += '<param name="allowscriptaccess" value="always">', c += '<param name="hasPriority" value="true">', c += '<param name="wmode" value="transparent">', c += '<param name="quality" value="high">', c += '<param name="allowFullScreenInteractive" value="true">', c += '<param name="name" value="player1">', c += '<param name="flashvars" value="playerId=2969363206&liveChannelID='+b.channel+'">', c += '<embed src="http://player.kksmg.com/data/player_swf/KKPlayer.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="transparent" name="player2" id="player2" flashvars="playerId=2969363206&liveChannelID='+b.channel+'">',
+								c += "</object>";
 						}
-						$(".non-live-box .livediv").html(palyer);
+						$(".non-live-box .livediv").html(c);
 					}
 				}
 			}
@@ -275,30 +276,31 @@ var b = {
 		});
 	},
 	hkClick:function(){
-    $(document).on("click",".date-box div",function(){
-      var divDate = $(this).attr('date');b.today = divDate;
-      b.dayflag = $(this).attr('did');
-      b.change = true;
-      b.hkInit();
-      $('.date-box div').removeClass('active');
-      $(this).addClass('active');
-    });
-    $(document).on("click",".channel li",function(){
-        b.now = 'hk';
-        channelChange.apply(this);
-    });
-    $(document).on("click",".fm li",function(){
-        b.now = 'gb';
-        channelChange.apply(this);
-    });
-    function channelChange(){
-        var divDate = $(this).attr('id');
-        b.hkId = divDate;
-        b.hkInit();
-        liveBox=[1,0,'k'];
-        $('.item li').removeClass('cur');
-        $(this).addClass('cur');
-    }
+		$(document).on("click",".date-box div",function(){
+		  var divDate = $(this).attr('date');b.today = divDate;
+		  b.dayflag = $(this).attr('did');
+		  b.change = true;
+		  b.hkInit();
+		  $('.date-box div').removeClass('active');
+		  $(this).addClass('active');
+		});
+		$(document).on("click",".channel li",function(){
+			b.now = 'hk';
+			channelChange.apply(this);
+		});
+		$(document).on("click",".fm li",function(){
+			b.now = 'gb';
+			channelChange.apply(this);
+		});
+		function channelChange(){
+			var divDate = $(this).attr('id');
+			b.hkId = parseInt(divDate) < 100? '0'+divDate:divDate;
+			b.channel = parseInt(divDate) < 100? 800 +'0'+divDate:800 +divDate;
+			b.hkInit();
+			liveBox=[1,0,'k'];
+			$('.item li').removeClass('cur');
+			$(this).addClass('cur');
+		}
 		$(document).on("click",".hk",function(){
 			$('.time-program').removeClass('on');
 			$(this).addClass('on');
@@ -355,12 +357,9 @@ function hkStream(judge,timeObj,channelid,now){
 	if (isIPad() || isIPhone()){
 		hkpadStream(judge,timeObj);
 	}else{
-		//console.log(channelid);
-		this.swfOcj = thisMovie();
-		this.swfOcj.changeChannel(channelid);
+		thisMovie().changeChannel(channelid);
 		if(b.now == 'gb'){
-            console.log('gbimg');
-			this.swfOcj.slides({
+			thisMovie().slides({
 					slides: [{
 						img: 'http://static.statickksmg.com/image/2015/08/21/a275ba1d57da791b9b45d6498e8db01f.jpg'
 					}]
@@ -370,20 +369,6 @@ function hkStream(judge,timeObj,channelid,now){
 		}
 	}
 }
-
-function changeChannel(chid){
-	if (isIPad() || isIPhone()){
-		padVideoUrl(chid);
-	}else{
-		this.swfOcj = thisMovie();
-		this.swfOcj.changeChannel(chid);
-	}
-}
-function padVideoUrl(chid){
-	$.getJSON("/phpapp/padvideourl.json.php",function(data){
-		$(".choose #ipod_player").html(data[chid]);
-	})
-}
 function thisMovie() {
 	if (navigator.userAgent.indexOf("MSIE") != -1) {
 		return window["player1"];
@@ -391,6 +376,19 @@ function thisMovie() {
 		return document["player2"];
 	}
 }
+function changeChannel(chid){
+	if (isIPad() || isIPhone()){
+		padVideoUrl(chid);
+	}else{
+		thisMovie().changeChannel(chid);
+	}
+}
+function padVideoUrl(chid){
+	$.getJSON("/phpapp/padvideourl.json.php",function(data){
+		$(".choose #ipod_player").html(data[chid]);
+	})
+}
+
 function isIPad(){
 	var ua = navigator.userAgent.toLowerCase();
 	if(ua.match(/iPad/i)=="ipad") {
