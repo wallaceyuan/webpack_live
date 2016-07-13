@@ -94,8 +94,15 @@ i.end-btn.left{background:#666;}
 .aside .program_all .tab span.cur{border-top:2px solid #e91839;background:#222;color:#fff;}
 .channel_fm{padding:28px 0 20px 0;color:#999;}
 .channel_fm li.cur{color:#fff;}
-.channel_fm li{position:relative;margin-bottom:10px;padding:5px 10% 5px 6.5%;cursor:pointer;}
-
+.channel_fm li {
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: inline-block;
+    width: 83.5%;
+    padding: 5px 10% 5px 6.5%;
+    float: left;
+}
 .channel_fm li.cur{background:#1e1f21;}
 .channel_fm .name {
     position: absolute;
@@ -105,7 +112,13 @@ i.end-btn.left{background:#666;}
     line-height: 50px;
 }
 
-.channel_fm .logo{width:50px;height:50px;}
+.channel_fm .logo {
+/*
+    margin: 5px 10% 5px 6.5%;
+*/
+    width: 45px;
+    height: 45px
+}
 .channel_fm .logo img{display:block;width:100%;}
 .channel_fm .item{display:none;}
 .channel_fm .item.cur{display:block;}

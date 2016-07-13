@@ -1,6 +1,6 @@
 .navBox{ background: #3d434d;margin-left: 30px;}
-.navMain{ width: 1170px; height: 80px;/* margin: 0 auto;*/ color: #fff; font-size: 24px;}
-.logo{ margin-right: 32px;}
+.navMain{width:100%; min-width: 1170px!important; height: 80px;/* margin: 0 auto;*/ color: #fff; font-size: 24px;}
+.navMain .logo{ margin-right: 32px;}
 ul.navList li{ float: left; display: inline; padding: 20px; height: 40px; line-height: 40px; overflow: hidden;}
 ul.navList li a{ color: #fff;}
 ul.navList li.cur{ background: url("../images/navline_bg.png") repeat-x 0 0;}

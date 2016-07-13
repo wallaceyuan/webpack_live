@@ -246,8 +246,8 @@ var b = {
 						$('.non-live-box #content-3').mCustomScrollbar("scrollTo", hkHeight - oHeight);
 					}, 1000);
 				}
-				//$('.head span.title').html($('.time-program').eq(liveBox[1]).attr('data-t'));
-				//$('.game-head .time span').html($('.time-program').eq(liveBox[1]).attr('data-time'));
+				$('.head span.title').html($('.time-program').eq(liveBox[1]).attr('data-t'));
+				$('.game-head .time span').html($('.time-program').eq(liveBox[1]).attr('data-time'));
 			} else {
 				$('.head span.title').html($('.hk').last().attr('data-t'));
 				$('.game-head .time span').html($('.hk').last().attr('data-time'));
