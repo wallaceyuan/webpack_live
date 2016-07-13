@@ -16,7 +16,7 @@ var d = navigator.userAgent.indexOf("MSIE 8") > -1 || navigator.userAgent.indexO
 
 $(".liveShare").append(sharebtn.wb,sharebtn.qq,sharebtn.wx);
 videoInt.hkInit();
-videofc.hkChannelInit();
+//videofc.hkChannelInit();
 videofc.hkTime();videofc.hkClick();videofc.changeItem();
 $(".non-live-box #content-3").mCustomScrollbar({
 	callbacks:{

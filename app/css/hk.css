@@ -42,7 +42,10 @@ body.in-live .header/*,body.in-hk .header  */{
 .game-head .badge{margin:20px 0px;font-size:24px;line-height:30px;    text-align: left;    padding: 0 160px 0 110px;}
 .in-hk .game-head .badge{padding:0 160px 0 30px;}
 .game-head .badge .head{
-    height: 30px;overflow: hidden;
+    max-height: 60px;
+    height: expression_r( this.scrollHeight > 60 ? "60px" : "auto" );
+    -webkit-max-height: 60px;
+    overflow: hidden;
 }
 .game-head .support-btn{display:block;margin:18px 30px 16px 30px;width:51px;height:51px;background:center center/51px 51px no-repeat;cursor:pointer;}
 i.end-btn.left,i.live-btn.left,i.yg-btn.left{display:block;margin:25px 0 16px 30px;width:55px;height:20px;background:#b30608;color:#fff;font-size:14px;line-height:20px;}
@@ -91,7 +94,7 @@ i.end-btn.left{background:#666;}
 .aside .program_all .tab span.cur{border-top:2px solid #e91839;background:#222;color:#fff;}
 .channel_fm{padding:28px 0 20px 0;color:#999;}
 .channel_fm li.cur{color:#fff;}
-.channel_fm li{position:relative;margin-bottom:20px;padding:0 10% 0 6.5%;cursor:pointer;}
+.channel_fm li{position:relative;margin-bottom:10px;padding:5px 10% 5px 6.5%;cursor:pointer;}
 
 .channel_fm li.cur{background:#1e1f21;}
 .channel_fm .name {

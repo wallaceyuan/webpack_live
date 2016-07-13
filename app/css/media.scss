@@ -267,8 +267,9 @@ $one_980:980px;
   .channel item{
     font-size:16px;
   }
-  .fm  .name{
-    font-size:14px;    left: 37%;
+  .fm .name{
+    font-size:14px;
+    left: 35%;
   }
   .channel_fm .logo {
     width: 45px;
@@ -304,8 +305,9 @@ $one_980:980px;
   .channel item{
     font-size:16px;
   }
-  .fm  .name{
-    font-size:14px;    left: 37%;
+  .fm .name{
+    font-size:14px;
+    left: 35%;
   }
   .channel_fm .logo {
     width: 45px;
@@ -339,8 +341,9 @@ $one_980:980px;
   .channel item{
     font-size:16px;
   }
-  .fm  .name{
-    font-size:14px;    left: 37%;
+  .fm .name{
+    font-size:14px;
+    left: 35%;
   }
   .channel_fm .logo {
     width: 45px;
@@ -370,6 +373,32 @@ $one_980:980px;
   }
   .non-live-box .listcontrol-pack{
     height:$three_zh;
+  }
+
+  .liveShare {
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+  .liveShare a i {
+    display: inline-block;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    color: #999;
+  }
+  .liveShare a i {
+    background:url(../images/share.png) no-repeat;
+    background-size: 120px;
+  }
+  .liveShare a.qq i {
+    background-position: -80px;
+  }
+  .liveShare a.wx i {
+    background-position: -40px;
+  }
+  .game-head .badge{
+    font-size: 20px;
   }
 }
 

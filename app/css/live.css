@@ -34,25 +34,27 @@ body.in-live .header,body.in-hk .header  {
 .header{position:relative;z-index:3000;margin-bottom:22px;width:100%;}
 .page-bg{position:fixed;top:0;left:0;z-index:-1;width:100%;height:100%;}
 .game-header.has-video .game-info-container{background-image:url(../images/alpha-07_1ffd3f.png);}
-.game-head{overflow:hidden;width:100%;min-height:91px !important;color:#fff;text-align:center;font-size:22px;}
-.game-head .thumb-container{width:111px;min-height:91px!important;
+.game-head{overflow:hidden;width:100%;min-height:75px !important;color:#fff;text-align:center;font-size:22px;}
+.game-head .thumb-container{width:150px;min-height:75px!important;
     position:absolute;top:0px;left: 0px;}
 .game-head .pull-left{float:left;}
-.game-head .badge{margin:18px 0px;font-size:24px;line-height:30px;    text-align: left;    padding: 0 160px 0 110px;}
-.game-head .badge .head{
-    height: 30px;overflow: hidden;
+.game-head .badge{font-size:24px;line-height:30px;    text-align: left;    padding: 0 160px 0 150px;}
+.game-head .badge .head {
+    height: 75px;
+    overflow: hidden;
+    line-height: 75px;
 }
 .game-head .support-btn{display:block;margin:18px 30px 16px 30px;width:51px;height:51px;background:center center/51px 51px no-repeat;cursor:pointer;}
 
-i.live-btn.left,i.yg-btn.left,i.end-btn.left  {
+i.live-btn.left, i.yg-btn.left, i.end-btn.left {
     display: block;
-    margin: 25px 0px 16px 30px;
-    width:55px;
+    margin: 0px 0px 16px 30px;
+    /* width: 55px; */
     height: 20px;
-    background: #b30608;
+    /* background: #b30608; */
     color: #fff;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 24px;
+    line-height: 75px;
 }
 i.yg-btn.left{
     background: #00a0e9;
@@ -83,7 +85,8 @@ i.end-btn.left{
     float: left;display: inline-block;margin-left: 30px;
 }
 .live-Interaction .title,.live-Interaction .live-tab-content,.boxW{
-    background-image:url(../images/alpha-07_1ffd3f.png);
+/*    background-image:url(../images/alpha-07_1ffd3f.png);*/
+    background: #242424;
 }
 .boxW{
     padding: 5px 5px 5px 5px;
@@ -97,19 +100,19 @@ i.end-btn.left{
     left: 0;
 }
 .tv-head{position:relative;
-    min-height: 91px !important;background-image:url(../images/alpha-07_1ffd3f.png);}
+    min-height: 75px !important;background-image:url(../images/alpha-07_1ffd3f.png);}
 .livediv{width:100%;height:100%;}
 /*#player1,#player2{width:100%;height:100%;}
 */
 /*右侧*/
 .aside-border{float:right;width:300px;height:1px;background:#1d2d39;}
-.live-tabs{position:relative;width:393px;height:38px;color:#fff;}
-.live-tabs h3{float:left;height:38px;color:#fff;text-align:center;font-size:18px;line-height:38px;cursor:pointer;box-sizing: border-box;}
+.live-tabs{position:relative;width:393px;height:75px;color:#fff;}
+.live-tabs h3{float:left;height:75px;color:#fff;text-align:center;font-size:18px;line-height:38px;cursor:pointer;box-sizing: border-box;}
 .live-tabs .line{width:100%;height:2px;}
 /*
 .live-tabs h3.active{background-image:url(../app/images/alpha-07_1fffff.png);}
-*/
-.live-tabs h3{background-image:url(../images/alpha-07_1ffd3f.png);}
+
+.live-tabs h3{background-image:url(../images/alpha-07_1ffd3f.png);}*/
 .live-tabs h3.active .line{background:#e63c2e;}
 .live-tabs h3.other{border-bottom:1px solid #20646b;border-left:1px solid #20646b;}
 /*.live-tabs{
@@ -118,12 +121,12 @@ i.end-btn.left{
 /*右侧切换*/
 
 .live-tabs{
-    background-image: url(../images/alpha-07_1ffd3f.png);
+    background-image: url(../images/alpha_3.png);
 }
 
 div.live-tabs h3:first-child{border-left:none;}
-div.live-tabs h3:last-child{border-right:none;    background: url(../images/alpha-03_1fffff.png);}
-.live-tabs h3.live-tabs-current{border-top:2px solid #c72b1e;border-right:1px solid #206970;border-bottom:1px solid transparent;border-left:1px solid #206970;background:0 0;color:#fff;}
+div.live-tabs h3:last-child{border-right:none;/*    background: url(../images/alpha-03_1fffff.png);*/}
+.live-tabs h3.live-tabs-current{border-top:2px solid #c72b1e;border-right:1px solid #206970;border-bottom:1px solid transparent;border-left:1px solid #206970;background:0 0;color:#fff;    background: #222;}
 .live-tabs-width3{width:33%;}
 .live-tabs-width2{width:49.8%;}
 
@@ -145,7 +148,7 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
 .time-program span.time{margin-right:15px;}
 .live-Interaction{color:#fff;text-align:left;}
 .live-Interaction .program-title{height:46px;font-size:16px;line-height:46px;}
-.live-Interaction .inner{padding:0px 20px;border-bottom:1px dashed #868686;cursor:pointer;position: relative;}
+.live-Interaction .inner{padding:0px 20px;/*border-bottom:1px dashed #868686;*/cursor:pointer;position: relative;}
 
 .live-tab-content #jmyg .inner{
     margin:0 20px;
@@ -300,15 +303,12 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
     right: 0;
     top: 25px;
 }
-.liveShare a i{background:url(http://skin.kankanews.com/v6/images/icons.png) no-repeat}
-.liveShare a{font-size:18px;margin-right:10px;height:40px;width:40px;border-radius:40px;position:relative;display:inline-block}
-.liveShare a.wb,.share_wb a{background-color:#e51c23}
-.liveShare a i{display:inline-block;width:32px;height:22px;position:absolute;bottom:10px;left:7px;overflow:hidden;color:#999}
-.liveShare a.qq{background-color:#3f51b5}
-.liveShare a.wx{background-color:#259b24}
-.liveShare a.wb i{background-position:1px 3px}
-.liveShare a.qq i{background-position:0 -42px}
-.liveShare a.wx i{background-position:1px -19px}
+.liveShare{position:absolute;top:10px;right:0;}
+.liveShare a i{background:url(../images/share.png) no-repeat;}
+.liveShare a{position:relative;display:inline-block;margin-right:10px;font-size:18px;}
+.liveShare a i{display:inline-block;overflow:hidden;width:50px;height:50px;color:#999;}
+.liveShare a.qq i{background-position:-100px;}
+.liveShare a.wx i{background-position:-50px;}
 
 #ipod_player, #ipod_player video {
     width: 100%;
@@ -494,7 +494,7 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
     bottom: 7px;
     right: 0;
     height: auto;
-    background: #b8b8b8;
+    background: #313131;
     border-radius: 10px;
 }
 .mCSB_scrollTools a+.mCSB_draggerContainer{margin:20px 0}
@@ -506,5 +506,5 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
 .mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown{display:block;position:absolute;height:20px;width:100%;overflow:hidden;margin:0 auto;cursor:pointer}
 .mCSB_scrollTools .mCSB_buttonDown{bottom:0}
 .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical,.mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical{right:0;margin:12px 0}
-.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.2);filter:"alpha(opacity=20)";-ms-filter:"alpha(opacity=20)"}
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#4e4e4e;background-color:rgba(0,0,0,0.2);filter:"alpha(opacity=20)";-ms-filter:"alpha(opacity=20)"}
 .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.5);filter:"alpha(opacity=50)";-ms-filter:"alpha(opacity=50)";}
