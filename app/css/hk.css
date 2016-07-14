@@ -111,13 +111,16 @@ i.end-btn.left{background:#666;}
     font-size: 18px;
     line-height: 50px;
 }
-
+.channel item{
+    font-size:16px;
+}
+.fm .name{
+    font-size:14px;
+    left: 35%;
+}
 .channel_fm .logo {
-/*
-    margin: 5px 10% 5px 6.5%;
-*/
     width: 45px;
-    height: 45px
+    height: 45px;
 }
 .channel_fm .logo img{display:block;width:100%;}
 .channel_fm .item{display:none;}

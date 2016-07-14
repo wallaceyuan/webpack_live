@@ -12,80 +12,69 @@
 
 $dateBox : 75px;
 $itemHeight : 77px;
-
 $five_1920:1920px;
-$ie_1920:'kkpage-1920';
-
-$four_1680:1700px;
-$ie_1680:'kkpage-1680';
-
-
+$four_1680:1680px;
 $three_1440:1440px;
-$ie_1440:'kkpage-1440';
-
 $two_1180:1180px;
-$ie_1180:'kkpage-1180';
-
 $one_980:980px;
-$ie_980:'kkpage-980';
 
-@mixin screenAdopt($param,$sW:575px,$rc:325px) {
-  $screen_B:$param;$screen_W:$screen_B - 30;$screen_vw:$screen_W - $sW;
+
+@function calculate($param,$sW) {
+  $result: ();
+  $screen_B:$param;
+  $screen_W:$screen_B - 30;
+  $screen_vw:$screen_W - $sW;
   $screen_vh:$screen_vw *9 /16 ;
   $screen_ph:$screen_vh + 90 - $dateBox;
   $screen_fh:$screen_vh + 20 - $itemHeight;
   $screen_zh:$screen_vh + $itemHeight;
+  $result:($screen_B, $screen_W,$screen_vw,$screen_vh,$screen_ph,$screen_fh,$screen_zh);
+  @return $result;
+}
+
+@mixin screenAdopt($param,$sW:575px,$rc:325px) {
+
+  $list : calculate($param,$sW);
 
   .play-rc-pack .non-live-box{
     min-width: $param - $rc;width: $param - $rc;margin:0 auto;
   }
   .aside{
-    left:$screen_vw;
+    left:nth($list,3);//$screen_vw
   }
   .section,.living-area{
-    width : $screen_vw;
+    width : nth($list,3);//$screen_vw
   }
   .screen{
-    width : $screen_vw;
-    height: $screen_vh;
+    width : nth($list,3);//$screen_vw
+    height: nth($list,4);//$screen_vh
   }
-  .non-live-box .live-tab-content{
-    height:$screen_ph;
+  .non-live-box {
+    .live-tab-content{
+      height: nth($list,5);//$screen_ph
+    }
+    .channel_fm{
+      height: nth($list,6);//$screen_fh
+    }
+    .listcontrol-pack{
+      height:nth($list,7);//$screen_zh
+    }
   }
-  .non-live-box .channel_fm{
-    height:$screen_fh;
-  }
-  .non-live-box .listcontrol-pack{
-    height:$screen_zh;
-  }
-  .channel item{
-    font-size:16px;
-  }
-  .fm .name{
-    font-size:14px;
-    left: 35%;
-  }
-  .channel_fm .logo {
-    width: 45px;
-    height: 45px;
-  }
+
 }
 
 @mixin ieAdopt($param,$iename,$sW:575px){
-  $screen_B:$param;$screen_W:$screen_B - 45;$screen_vw:$screen_W - $sW;
-  $screen_vh:$screen_vw *9 /16 ;
-  $screen_ph:$screen_vh + 90 - $dateBox;
-  $screen_fh:$screen_vh + 20 - $itemHeight;
-  $screen_zh:$screen_vh + $itemHeight;
+
+  $list : calculate($param,$sW:575px);
 
   .#{$iename}.play-rc-pack .non-live-box{
-    min-width:280+ $screen_vw;width:280 + $screen_vw;margin:0 auto;
+    min-width:280+ nth($list,3);width:280 + nth($list,3);margin:0 auto;//$screen_vw
   }
   .#{$iename} .non-live-box{
-    min-width:480 + $screen_vw;width:480 + $screen_vw;margin:0 auto;
+    min-width:480 + nth($list,3);width:480 + nth($list,3);margin:0 auto;//$screen_vw
   }
   .#{$iename} .aside{
-    left:$screen_vw;
+    left:nth($list,3);//$screen_vw
   }
   .#{$iename} .program_list{
     min-width: 280px;width: 280px;
@@ -93,69 +82,27 @@ $ie_980:'kkpage-980';
   .#{$iename} .aside .program_all{
     min-width: 174px;width: 174px;
   }
-  .#{$iename} .section,.kkpage-1680 .living-area{
-    width : $screen_vw;
+  .#{$iename} .section,.#{$iename} .living-area{
+    width : nth($list,3);//$screen_vw
   }
   .#{$iename} .screen{
-    width : $screen_vw;
-    height: $screen_vh;
+    width : nth($list,3);//$screen_vw
+    height: nth($list,4);//$screen_vh
   }
-  .#{$iename} .non-live-box .live-tab-content{
-    height:$screen_ph;
-  }
-  .#{$iename} .non-live-box .channel_fm{
-    height:$screen_fh;
-  }
-  .#{$iename} .non-live-box .listcontrol-pack{
-    height:$screen_zh;
-  }
-  .#{$iename} .channel .item{
-    font-size:16px;
-  }
-  .#{$iename} .fm .name{
-    font-size:14px;    left: 37%;
-  }
-  .#{$iename} .channel_fm .logo {
-    width: 45px;
-    height: 45px;
-  }
-  .#{$iename} .channel_fm li{
-    //padding: 0;
+  .#{$iename} .non-live-box {
+    .live-tab-content{
+      height:nth($list,5);//$screen_ph
+    }
+    .channel_fm{
+      height:nth($list,6);//$screen_fh;
+    }
+    .listcontrol-pack{
+      height:nth($list,7);//$screen_zh
+    }
   }
 }
 
-@include screenAdopt($four_1680);
-
-
-@include ieAdopt($five_1920,$ie_1920);
-@include ieAdopt($four_1680,$ie_1680);
-@include ieAdopt($three_1440,$ie_1440);
-@include ieAdopt($two_1180,$ie_1180,470);
-@include ieAdopt($two_1180,$ie_980,470);
-
-.kkpage-1180 .non-live-box{
-  min-width: 1164px;
-}
-
-
-@media (max-width: $five_1920) and (min-width:$four_1680+ 1 ){
-  @include screenAdopt($five_1920);
-  .non-live-box{
-    min-width: 1559px;
-  }
-}
-@media (max-width: $four_1680) and (min-width:$three_1440+ 1 ) {
-  @include screenAdopt($four_1680);
-  .non-live-box{
-    min-width: 1559px;
-  }
-}
-
-@media (max-width: $three_1440) and (min-width:$two_1180+ 1 ){
-  @include screenAdopt($three_1440);
-  .non-live-box{
-    min-width: 1319px;
-  }
+@mixin smallFont(){
   .liveShare {
     position: absolute;
     top: 15px;
@@ -183,8 +130,59 @@ $ie_980:'kkpage-980';
   }
 }
 
+@include screenAdopt($four_1680);
+
+
+$i: 1;
+$domWidth:1920px,1680px,1440px,1180px,1180px;
+$domClass:'kkpage-1920','kkpage-1680','kkpage-1440','kkpage-1180','kkpage-980';
+
+@each $width in $domWidth {
+  $minus:'';
+  @if $width == 1180px {
+    $minus : 470;
+  }
+  @include ieAdopt($width,nth($domClass,$i),$minus);
+  $i: $i + 1;
+}
+
+/*
+@include ieAdopt($five_1920,$ie_1920);
+@include ieAdopt($four_1680,$ie_1680);
+@include ieAdopt($three_1440,$ie_1440);
+@include ieAdopt($two_1180,$ie_1180,470);
+@include ieAdopt($two_1180,$ie_980,470);
+*/
+
+
+.kkpage-1180 .non-live-box{
+  min-width: 1164px;
+}
+
+@media (max-width: $five_1920) and (min-width:$four_1680+ 1 ){
+  @include screenAdopt($five_1920);
+  .non-live-box{
+    min-width: 1559px;
+  }
+}
+@media (max-width: $four_1680) and (min-width:$three_1440+ 1 ) {
+  @include screenAdopt($four_1680);
+  .non-live-box{
+    min-width: 1559px;
+  }
+}
+
+@media (max-width: $three_1440) and (min-width:$two_1180+ 1 ){
+  @include screenAdopt($three_1440);
+  @include smallFont();
+  .non-live-box{
+    min-width: 1319px;
+  }
+}
+
 @media (max-width: $two_1180) {
   @include screenAdopt($two_1180,470,220);
+  @include smallFont();
 
   .non-live-box{
     min-width: 1164px;

@@ -48,10 +48,7 @@ body.in-live .header,body.in-hk .header  {
 
 i.live-btn.left, i.yg-btn.left, i.end-btn.left {
     display: block;
-    margin: 0px 0px 16px 30px;
-    /* width: 55px; */
-    height: 20px;
-    /* background: #b30608; */
+    margin: 0px 0px 0px 30px;
     color: #fff;
     font-size: 24px;
     line-height: 75px;
@@ -86,7 +83,7 @@ i.end-btn.left{
 }
 .live-Interaction .title,.live-Interaction .live-tab-content,.boxW{
 /*    background-image:url(../images/alpha-07_1ffd3f.png);*/
-    background: #242424;
+    background: #262829;
 }
 .boxW{
     padding: 5px 5px 5px 5px;
@@ -106,8 +103,17 @@ i.end-btn.left{
 */
 /*右侧*/
 .aside-border{float:right;width:300px;height:1px;background:#1d2d39;}
-.live-tabs{position:relative;width:393px;height:75px;color:#fff;}
-.live-tabs h3{float:left;height:75px;color:#fff;text-align:center;font-size:18px;line-height:38px;cursor:pointer;box-sizing: border-box;}
+.live-tabs{position:relative;width:393px;height:75px;color:#fff;padding-bottom: 20px;}
+.live-tabs h3 {
+    float: left;
+    height: 75px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 38px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
 .live-tabs .line{width:100%;height:2px;}
 /*
 .live-tabs h3.active{background-image:url(../app/images/alpha-07_1fffff.png);}
@@ -121,12 +127,21 @@ i.end-btn.left{
 /*右侧切换*/
 
 .live-tabs{
-    background-image: url(../images/alpha_3.png);
+    background: #242424;
 }
 
 div.live-tabs h3:first-child{border-left:none;}
-div.live-tabs h3:last-child{border-right:none;/*    background: url(../images/alpha-03_1fffff.png);*/}
-.live-tabs h3.live-tabs-current{border-top:2px solid #c72b1e;border-right:1px solid #206970;border-bottom:1px solid transparent;border-left:1px solid #206970;background:0 0;color:#fff;    background: #222;}
+div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    background: url(../images/alpha-03_1fffff.png);*/}
+.live-tabs h3.live-tabs-current {
+    border-top: 2px solid #c72b1e;
+    /*
+    border-right: 1px solid #206970;
+    */
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #206970;
+    background: 0 0;
+    color: #fff;
+}
 .live-tabs-width3{width:33%;}
 .live-tabs-width2{width:49.8%;}
 
@@ -204,33 +219,42 @@ div.live-tabs h3:last-child{border-right:none;/*    background: url(../images/al
     font-weight: 700;
     margin: 6px 0 2px 0;
 }
-
-
 .tabcon .videoHuiguImg {
-    width: 87px;
-    height: 48px;
-    float: left;
+    width: 160px;
+    height: 90px;
     overflow: hidden;
     border: 2px solid transparent;
-    position: relative;
 }
 .tabcon .videoHuiguImg img{
     width: 100%;
 }
 .tabcon .videoHuiguTxt {
     overflow: hidden;
-    margin-left: 98px;
-    width: 255px;
+    width: 170px;
+    position: absolute;
+    top: 14px;
+    left: 185px;
 }
 .tabcon .videoHuiguTxt dt{
     min-height: 30px!important;
 }
 .tabcon .videoHuiguTxt dl{
-    position: relative;
+    position: relative;    height: 90px;
 }
 
 .tabcon .videoHuiguTxt dd{
-    font-style: italic;
+    color: #75787c;
+    font-size: 17px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.tabcon .videoHuiguTxt dd i {
+    margin-right: 7px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../images/clock_gry.png) center center/14px 14px no-repeat;
 }
 .live-tab-content .live-program.inner {
     padding: 14px 20px;
@@ -290,13 +314,19 @@ div.live-tabs h3:last-child{border-right:none;/*    background: url(../images/al
 .live-tab-content .wrapper a.link{
     position: absolute;
     top: 0px;left: 0px;
-    z-index: 2;display: block;height: 100%;width: 100%;
+    /*z-index: 2;*/display: block;height: 100%;width: 100%;
 }
 .live-tab-content #jmyg .wrapper:hover {
+    background: #1e2022;
+    /*
     background-image: url(../images/alpha-07_1ffd3f.png);
+    */
 }
 .live-tab-content #jmyg .wrapper.now{
+    background: #1e2022;
+    /*
     background-image: url(../images/alpha-07_1ffd3f.png);
+    */
 }
 .liveShare {
     position: absolute;
