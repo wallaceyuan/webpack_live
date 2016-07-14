@@ -1,6 +1,4 @@
-/*
-body.game-page.in-live,body.game-page.in-hk {padding-top: 40px;}
-*/
+
 body.game-page.loaded {
   background: #000 url(../images/live-index.jpg) repeat;
 }
@@ -12,10 +10,6 @@ video{
     height: 22px;
     width: 100%;
 }
-/*liveWrapper*/
-/*.live-box,.non-live-box {
-    margin: 0px 50px 0 30px;
-}*/
 
 /*header*/
 body.in-live .header,body.in-hk .header  {
@@ -134,9 +128,6 @@ div.live-tabs h3:first-child{border-left:none;}
 div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    background: url(../images/alpha-03_1fffff.png);*/}
 .live-tabs h3.live-tabs-current {
     border-top: 2px solid #c72b1e;
-    /*
-    border-right: 1px solid #206970;
-    */
     border-bottom: 1px solid transparent;
     border-left: 1px solid #206970;
     background: 0 0;
@@ -318,15 +309,9 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
 }
 .live-tab-content #jmyg .wrapper:hover {
     background: #1e2022;
-    /*
-    background-image: url(../images/alpha-07_1ffd3f.png);
-    */
 }
 .live-tab-content #jmyg .wrapper.now{
     background: #1e2022;
-    /*
-    background-image: url(../images/alpha-07_1ffd3f.png);
-    */
 }
 .liveShare {
     position: absolute;
@@ -530,11 +515,10 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
 .mCSB_scrollTools a+.mCSB_draggerContainer{margin:20px 0}
 .mCSB_scrollTools .mCSB_draggerRail{width:2px;height:100%;margin:0 auto;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px}
 .mCSB_scrollTools .mCSB_dragger{cursor:pointer;width:100%;height:30px;z-index:1}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{position:relative;width:4px;height:100%;margin:0 auto;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px;text-align:center; background:#849b9f;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{position:relative;width:4px;height:100%;margin:0 auto;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px;text-align:center; background:#4e4e4e;}
 .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{width:12px}
 .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{width:8px}
 .mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown{display:block;position:absolute;height:20px;width:100%;overflow:hidden;margin:0 auto;cursor:pointer}
 .mCSB_scrollTools .mCSB_buttonDown{bottom:0}
 .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical,.mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical{right:0;margin:12px 0}
-.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#4e4e4e;background-color:rgba(0,0,0,0.2);filter:"alpha(opacity=20)";-ms-filter:"alpha(opacity=20)"}
 .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.5);filter:"alpha(opacity=50)";-ms-filter:"alpha(opacity=50)";}

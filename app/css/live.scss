@@ -2,13 +2,13 @@
 $side : 393px;
 
 $five_1920:1920px;$five_W:1720px;
-$five_vw:$five_W - $side - 30;$five_vh:$five_vw *9 /16 + 45;
+$five_vw:$five_W - $side - 30;$five_vh:$five_vw *9 /16;
 
 $four_1680:1700px;$four_W:1500px;
-$four_vw:$four_W - $side - 30;$four_vh:$four_vw *9 /16 + 45;
+$four_vw:$four_W - $side - 30;$four_vh:$four_vw *9 /16;
 
 $three_1440:1440px;$three_W:1240px;
-$three_vw:$three_W - $side - 30;$three_vh:$three_vw *9 /16 + 45;
+$three_vw:$three_W - $side - 30;$three_vh:$three_vw *9 /16;
 
 $two_1180:1180px;$two_W:1170px;
 $two_vw:$two_W - $side - 30;$two_vh:$two_vw *9 /16;
@@ -27,7 +27,7 @@ $one_980:980px;
   width: $five_vw;height: $five_vh;
 }
 .kkpage-1920  .live-tab-content{
-  height: $five_vh + 60 ;
+  height: $five_vh - 20 ;
 }
 
 .kkpage-1680 .live-box{
@@ -41,7 +41,7 @@ $one_980:980px;
   width: $four_vw;height: $four_vh;
 }
 .kkpage-1680 .live-tab-content{
-  height: $four_vh + 60 ;
+  height: $four_vh - 20 ;
 }
 
 
@@ -57,7 +57,7 @@ $one_980:980px;
   width: $three_vw;height: $three_vh;
 }
 .kkpage-1440  .live-tab-content{
-  height: $three_vh  + 60 ;
+  height: $three_vh - 20 ;
 }
 
 
@@ -72,7 +72,7 @@ $one_980:980px;
   width: $two_vw;height: $two_vh;
 }
 .kkpage-1180  .live-tab-content{
-  height: $two_vh  + 60 ;
+  height: $two_vh  - 20 ;
 }
 
 
@@ -88,5 +88,5 @@ $one_980:980px;
   width: $two_vw;height: $two_vh;
 }
 .live-tab-content{
-  height: $two_vh  + 60 ;
+  height: $two_vh  - 20 ;
 }
