@@ -60,7 +60,9 @@ $one_980:980px;
       height:nth($list,7);//$screen_zh
     }
   }
-
+  .non-live-box {
+    margin: 0px 0px 0 30px;
+  }
 }
 
 @mixin ieAdopt($param,$iename,$sW:575px){
@@ -130,7 +132,7 @@ $one_980:980px;
   }
 }
 
-@include screenAdopt($four_1680);
+@include screenAdopt($five_1920);
 
 
 $i: 1;
@@ -159,10 +161,17 @@ $domClass:'kkpage-1920','kkpage-1680','kkpage-1440','kkpage-1180','kkpage-980';
   min-width: 1164px;
 }
 
+@media (min-width: $five_1920) {
+  .in-live .live-box, .in-hk .non-live-box{
+    width: 1885px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: $five_1920) and (min-width:$four_1680+ 1 ){
   @include screenAdopt($five_1920);
   .non-live-box{
-    min-width: 1559px;
+    min-width: 1799px;
   }
 }
 @media (max-width: $four_1680) and (min-width:$three_1440+ 1 ) {
