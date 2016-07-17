@@ -38,15 +38,12 @@ module.exports = {
 	hkLiveWidth:function(){
 		var dateHeight = 75,itemHeight = 77;
 		var d = navigator.userAgent.indexOf("MSIE 8") > -1 || navigator.userAgent.indexOf("MSIE 7") > -1;
-		var p = this.isIPad();
 		var c_w = $(window).width();
 		var video_w = c_w -575-30;
 		var e = video_w,
-    t = parseInt(9 * e / 16)+45;
+            t = parseInt(9 * e / 16)+45;
 		var h = $('.non-live-box .section').height();
-    if(p){
-        $(".non-live-box .live-Interaction").height(h),$(".non-live-box .live-tab-content").height(h - 38-47)
-    }
+
     if(d){
         //$('.non-live-box').width('1319px');
         this.widthJudge();
@@ -58,11 +55,6 @@ module.exports = {
 		$(this).removeClass('listcontrol-pack-hover');
 	});
 
-/*	$('.listcontrol-pack').on('hover',function(){
-		$(this).addClass('listcontrol-pack-hover');
-	},function(){
-		$(this).removeClass('listcontrol-pack-hover');
-	});*/
 	$('.listcontrol-pack').on('click',function(){
 		$('body').removeClass('play-rc-pack');
 	});
@@ -72,8 +64,8 @@ module.exports = {
 	},
   widthJudgeLive:function(){
       var c_w = $(window).width();
-	  console.log(c_w);
       $('body').removeClass(b.widthClass);
+      b.widthClass = 'kkpage-1920';
       if(c_w<1920){
           b.widthClass = 'kkpage-1920';
       }

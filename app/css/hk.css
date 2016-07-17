@@ -1,7 +1,7 @@
 
 /*body.game-page.in-live,body.game-page.in-hk {padding-top: 80px;}
 */body.game-page.loaded {
-    background: #000 url(../images/live-index.jpg) no-repeat;    background-size: 100%;
+    background: #000 url(../images/live-index.jpg) no-repeat;
 }
 video{
     width: 100%;

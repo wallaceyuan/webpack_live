@@ -31,6 +31,7 @@ $(".live-box #content-1").mCustomScrollbar({
 		}
 	}
 });
+videoInt.widthJudgeLive();
 $(window).resize(function() {
 	videoInt.widthJudgeLive();
 });

@@ -72,7 +72,6 @@ i.end-btn.left{
   float: left;display: inline-block;
 }
 .aside {
-    width: 393px;
     float: left;display: inline-block;margin-left: 30px;
 }
 .live-Interaction .title,.live-Interaction .live-tab-content,.boxW{
@@ -211,6 +210,8 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
     margin: 6px 0 2px 0;
 }
 .tabcon .videoHuiguImg {
+    position: absolute;
+    top: 14px;left: 0;
     width: 160px;
     height: 90px;
     overflow: hidden;
@@ -221,13 +222,11 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
 }
 .tabcon .videoHuiguTxt {
     overflow: hidden;
-    width: 170px;
-    position: absolute;
-    top: 14px;
-    left: 185px;
+/*    position: absolute;
+    top: 14px;*/
 }
 .tabcon .videoHuiguTxt dt{
-    min-height: 30px!important;
+    height: 60px;overflow: hidden;
 }
 .tabcon .videoHuiguTxt dl{
     position: relative;    height: 90px;
@@ -235,10 +234,10 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
 
 .tabcon .videoHuiguTxt dd{
     color: #75787c;
-    font-size: 17px;
+    font-size: 16px;
     position: absolute;
     bottom: 0px;
-    left: 0px;
+    left: 0px;    line-height: 16px;
 }
 .tabcon .videoHuiguTxt dd i {
     margin-right: 7px;
@@ -252,7 +251,7 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
 }
 .live-tab-content #jmyg .live-program.inner {
     padding: 14px 0px;
-    margin: 0 20px;
+    margin: 0 5%;
 }
 .live-tab-content .wrapper{
     position: relative;

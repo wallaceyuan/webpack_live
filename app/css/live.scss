@@ -1,92 +1,79 @@
 
 $side : 393px;
 
-$five_1920:1920px;$five_W:1720px;
-$five_vw:$five_W - $side - 30;$five_vh:$five_vw *9 /16;
+$five_1920:1920px;
+$five_class:'kkpage-1920';
 
-$four_1680:1700px;$four_W:1500px;
-$four_vw:$four_W - $side - 30;$four_vh:$four_vw *9 /16;
+$four_1680:1680px;
+$four_class:'kkpage-1680';
 
-$three_1440:1440px;$three_W:1240px;
-$three_vw:$three_W - $side - 30;$three_vh:$three_vw *9 /16;
 
-$two_1180:1180px;$two_W:1170px;
-$two_vw:$two_W - $side - 30;$two_vh:$two_vw *9 /16;
+$three_1440:1440px;
+$three_class:'kkpage-1440';
+
+$two_1180:1180px;
+$two_class:'kkpage-1180';
 
 
 $one_980:980px;
+$one_class:'kkpage-980';
 
-.kkpage-1920 .live-box{
-  width: $five_W;
-  margin: 0 auto;
-}
-.kkpage-1920 .section{
-  width: $five_vw;height: $five_vh + 58;
-}
-.kkpage-1920 .screen embed, .kkpage-1920 .screen object{
-  width: $five_vw;height: $five_vh;
-}
-.kkpage-1920  .live-tab-content{
-  height: $five_vh - 20 ;
-}
-
-.kkpage-1680 .live-box{
-  width: $four_W;
-  margin: 0 auto;
-}
-.kkpage-1680 .section{
-  width: $four_vw;height: $four_vh + 58;
-}
-.kkpage-1680 .screen embed, .kkpage-1680 .screen object{
-  width: $four_vw;height: $four_vh;
-}
-.kkpage-1680 .live-tab-content{
-  height: $four_vh - 20 ;
+@function calculate($param,$sW) {
+  $result: ();
+  $right : $param * (393/1680);
+  $right_img:$param * (160 /1680);
+  $screen_B:$param;
+  $screen_W:$screen_B - $sW;
+  $screen_vw:$screen_W - $right - 30;
+  $screen_vh:$screen_vw * 9 /16 ;
+  $result:($screen_B, $screen_W,$screen_vw,$screen_vh,$right,$right_img);
+  @return $result;
 }
 
-
-
-.kkpage-1440 .live-box{
-  width: $three_W;
-  margin: 0 auto;
-}
-.kkpage-1440 .section{
-  width: $three_vw;height: $three_vh +58;
-}
-.kkpage-1440 .screen embed, .kkpage-1440 .screen object{
-  width: $three_vw;height: $three_vh;
-}
-.kkpage-1440  .live-tab-content{
-  height: $three_vh - 20 ;
-}
-
-
-.kkpage-1180 .live-box{
-  width: $two_W;
-  margin: 0 auto;
-}
-.kkpage-1180 .section{
-  width: $two_vw;height: $two_vh +58;
-}
-.kkpage-1180 .screen embed, .kkpage-1180 .screen object{
-  width: $two_vw;height: $two_vh;
-}
-.kkpage-1180  .live-tab-content{
-  height: $two_vh  - 20 ;
+@mixin screenAdopt($name,$param,$sW:200){
+  $list : calculate($param,$sW);
+  .#{$name} {
+    .live-box{
+      width: nth($list,2);
+      margin: 0 auto;
+    }
+    .section{
+      width: nth($list,3);height:  nth($list,4) + 58;
+    }
+    .screen embed,.screen object{
+      width:nth($list,3);height: nth($list,4);
+    }
+    .live-tab-content{
+      height: nth($list,4)- 20 ;
+    }
+    .aside{
+      width:nth($list,5) ;
+    }
+    .live-tabs{
+      width:nth($list,5) ;
+    }
+    .tabcon .videoHuiguImg{
+      width:nth($list,6) ;
+      height:nth($list,6) * 9 / 16;
+    }
+    .tabcon{
+      .videoHuiguTxt{
+        margin-left:nth($list,6)+ 15;
+      }
+      .videoHuiguTxt dl{
+        height:nth($list,6) * 9 / 16;
+      }
+    }
+  }
 }
 
 
+@include screenAdopt($five_class,$five_1920);
+@include screenAdopt($four_class,$four_1680);
+@include screenAdopt($three_class,$three_1440);
+@include screenAdopt($two_class,$two_1180,10);
+@include screenAdopt($one_class,$two_1180,10);
 
-.live-box{
-  width: $two_W;
-  margin: 0 auto;
-}
-.section{
-  width: $two_vw;height: $two_vh +58;
-}
-.screen embed, .screen object{
-  width: $two_vw;height: $two_vh;
-}
-.live-tab-content{
-  height: $two_vh  - 20 ;
-}
+
+
+

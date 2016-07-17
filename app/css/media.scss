@@ -72,36 +72,38 @@ $one_980:980px;
   .#{$iename}.play-rc-pack .non-live-box{
     min-width:280+ nth($list,3);width:280 + nth($list,3);margin:0 auto;//$screen_vw
   }
-  .#{$iename} .non-live-box{
-    min-width:480 + nth($list,3);width:480 + nth($list,3);margin:0 auto;//$screen_vw
-  }
-  .#{$iename} .aside{
-    left:nth($list,3);//$screen_vw
-  }
-  .#{$iename} .program_list{
-    min-width: 280px;width: 280px;
-  }
-  .#{$iename} .aside .program_all{
-    min-width: 174px;width: 174px;
-  }
-  .#{$iename} .section,.#{$iename} .living-area{
-    width : nth($list,3);//$screen_vw
-  }
-  .#{$iename} .screen{
-    width : nth($list,3);//$screen_vw
-    height: nth($list,4);//$screen_vh
-  }
-  .#{$iename} .non-live-box {
-    .live-tab-content{
-      height:nth($list,5);//$screen_ph
+  .#{$iename} {
+    .non-live-box{
+      min-width:480 + nth($list,3);width:480 + nth($list,3);margin:0 auto;//$screen_vw
     }
-    .channel_fm{
-      height:nth($list,6);//$screen_fh;
+    .aside{
+      left:nth($list,3);//$screen_vw
     }
-    .listcontrol-pack{
-      height:nth($list,7);//$screen_zh
+    .program_list{
+      min-width: 280px;width: 280px;
     }
+    .aside .program_all{
+      min-width: 174px;width: 174px;
+    }
+    .section,.living-area{
+      width : nth($list,3);//$screen_vw
+    }
+    .screen{
+      width : nth($list,3);//$screen_vw
+      height: nth($list,4);//$screen_vh
+    }
+    .non-live-box {
+      .live-tab-content{
+        height:nth($list,5);//$screen_ph
+      }
+      .channel_fm{
+        height:nth($list,6);//$screen_fh;
+      }
+      .listcontrol-pack{
+        height:nth($list,7);//$screen_zh
+      }
   }
+}
 }
 
 @mixin smallFont(){
