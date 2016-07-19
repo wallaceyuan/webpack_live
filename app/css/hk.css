@@ -166,7 +166,7 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
 
 
 /*右侧时间选择*/
-.date-box{width: 100%;/*width:360px;*/background:url(../images/alpha_3.png);text-align: center;/*border-radius: 13px 13px 0px 0px;*/}
+.date-box{height: 75px;width: 100%;/*width:360px;*/background:url(../images/alpha_3.png);text-align: center;/*border-radius: 13px 13px 0px 0px;*/}
 .date-box div {
     color: #999999;
     float: left;
@@ -327,6 +327,13 @@ div.live-tabs h3:last-child{border-right:none;    background: url(../images/alph
 .copyright span {
     font-size: 12px;
     margin: 0 5px;
+}
+p.loadingTip{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    margin-top: -6px;
 }
 /*天气预报*/
 .weather{padding-right: 10px;color: #fff; position: relative; top: 0; right: 0;}

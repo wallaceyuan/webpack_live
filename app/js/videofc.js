@@ -152,7 +152,8 @@ var b = {
             dataType: "json",
             success: function(data) {
                 //console.log('http://api.app.kankanews.com/kankan/v5/livePC/stream/catchup/info/'+hkId+'_' + b.today + '/?jsoncallback=?');
-				that.hkTemple(data,that);
+				$('p.loadingTip').css('display','none');
+                that.hkTemple(data,that);
             }
         });
     },
