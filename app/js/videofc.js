@@ -28,12 +28,12 @@ var b = {
 			if (parseInt(data[key].timestamp) < parseInt(time_stamp)) {
 				liveNew.push(parseInt(data[key].id));
 				var introR = data[key].intro.replace("\\\\ ", "");
-				str1 += '<div class="wrapper" timestamp="' + data[key].timestamp + '" status="' + data[key].status + '"  id="' + data[key].id + '" intro=\'' + introR + '\'><a class="link" href="http://live.kankanews.com/zhibo/' + data[key].id + '.html"></a><div class="live-program inner">' +
+				str1 += '<div class="wrapper" timestamp="' + data[key].timestamp + '" status="' + data[key].status + '"  id="' + data[key].id + '" intro=\'' + introR + '\'><span class="arrow"></span><a class="link" href="http://live.kankanews.com/zhibo/' + data[key].id + '.html"></a><div class="live-program inner">' +
 					'<div class="videoHuiguImg"><img class="highlights-cover" src="' + data[key].titlepic + '"></div>';
 				str1 += '<div class="videoHuiguTxt"><dl><dt>' + data[key].title + '</dt>' +
 					'<dd><i></i>' + data[key].stime + '</dd><!--<span>直播</span>--></dl></div></div></div>';
 			} else {
-				str2 += '<div class="wrapper yg"  timestamp="' + data[key].timestamp + '"  status="' + data[key].status + '" id="' + data[key].id + '" intro="' + data[key].intro + '"><a class="link" href="http://live.kankanews.com/zhibo/' + data[key].id + '.html"></a><div  class="live-program inner foreshow">' +
+				str2 += '<div class="wrapper yg"  timestamp="' + data[key].timestamp + '"  status="' + data[key].status + '" id="' + data[key].id + '" intro="' + data[key].intro + '"><span class="arrow"></span><a class="link" href="http://live.kankanews.com/zhibo/' + data[key].id + '.html"></a><div  class="live-program inner foreshow">' +
 					'<div class="videoHuiguImg"><img class="highlights-cover" src="' + data[key].titlepic + '"></div>';
 				str2 += '<div class="videoHuiguTxt"><dl><dt>' + data[key].title + '</dt>' +
 					'<dd><i></i>' + data[key].stime + '</dd><!--<span>预告</span>--></dl></div></div></div>';

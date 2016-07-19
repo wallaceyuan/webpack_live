@@ -4,10 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" href="http://skin.kankanews.com/kankancms/images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="http://skin.kankanews.com/kankancms/images/favicon.ico" type="image/x-icon" />
-    <meta name="Keywords" content="ÊÓÆµÖ±²¥, ÐÂÎÅÖ±²¥, ÐÂÎÅÖ±²¥¼ä, ¸ãÐ¦ÊÓÆµ, Ã÷ÐÇ·ÃÌ¸Ö±²¥, µçÓ°Ö±²¥, µçÊÓ¾çÖ±²¥, ÌìÆøÔ¤±¨" />
-    <meta name="Description" content="¿´¿´ÐÂÎÅÍø24Ð¡Ê±Ö±²¥Á÷¡£ÊÓÆµÖ±²¥ÖØ´óÊÂ¼þ¡¢Ö±²¥Í»·¢ÐÂÎÅ¡¢Ö±²¥È¨Íþ·¢²¼¡¢Ö±²¥µçÓ°µçÊÓ¾ç·¢²¼²¢¾«Ñ¡Ã¿ÈÕ¹ú¼ÊÓë¹úÄÚÊÓÆµÐÂÎÅ¡¢Éç»áÐÂÎÅ¡¢ÌåÓýÐÂÎÅ¡¢ÓéÀÖ ÐÂÎÅ¡¢²Æ¾­ÐÂÎÅ¡£Ã¿Ìì²»Í¬Ê±¶Î²¥³öÊÓÆµ×ÊÑ¶¡¢ÐÂÎÅÆÀÂÛ½ÚÄ¿£¬ËÑ¼¯ÂÛÌ³ÈÈµã¡¢»ã¾Û¸ãÐ¦ÊÓÆµ£¬·¢²¼ÌìÆøÔ¤±¨²¢¿ÉÍ¨¹ýÊÓÆµ²ÎÓëÖ±²¥¡£" />
+    <meta name="Keywords" content="è§†é¢‘ç›´æ’­, æ–°é—»ç›´æ’­, æ–°é—»ç›´æ’­é—´, æžç¬‘è§†é¢‘, æ˜Žæ˜Ÿè®¿è°ˆç›´æ’­, ç”µå½±ç›´æ’­, ç”µè§†å‰§ç›´æ’­, å¤©æ°”é¢„æŠ¥" />
+    <meta name="Description" content="çœ‹çœ‹æ–°é—»24å°æ—¶ç›´æ’­æµã€‚è§†é¢‘ç›´æ’­é‡å¤§äº‹ä»¶ã€ç›´æ’­çªå‘æ–°é—»ã€ç›´æ’­æƒå¨å‘å¸ƒã€ç›´æ’­ç”µå½±ç”µè§†å‰§å‘å¸ƒå¹¶ç²¾é€‰æ¯æ—¥å›½é™…ä¸Žå›½å†…è§†é¢‘æ–°é—»ã€ç¤¾ä¼šæ–°é—»ã€ä½“è‚²æ–°é—»ã€å¨±ä¹ æ–°é—»ã€è´¢ç»æ–°é—»ã€‚æ¯å¤©ä¸åŒæ—¶æ®µæ’­å‡ºè§†é¢‘èµ„è®¯ã€æ–°é—»è¯„è®ºèŠ‚ç›®ï¼Œæœé›†è®ºå›çƒ­ç‚¹ã€æ±‡èšæžç¬‘è§†é¢‘ï¼Œå‘å¸ƒå¤©æ°”é¢„æŠ¥å¹¶å¯é€šè¿‡è§†é¢‘å‚ä¸Žç›´æ’­ã€‚" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>ÁªºÏ¹úÌØÊ¹ÕÙ¿ªÐÂÎÅ·¢²¼»áÐû²¼ÐðÀûÑÇºÍÌ¸ÖØÆô_¿´¿´ÐÂÎÅÍø</title>
+    <title><?php echo $navinfor[title]?>_çœ‹çœ‹æ–°é—»</title>
     <script type="text/javascript">
         var now = 'now';var hkId = '84';var mid = '144';var status = '0';
         if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod/i.test(navigator.userAgent.toLowerCase())){
@@ -22,51 +22,25 @@
     <script type="text/javascript">
         if(device.type === "pad") {
             document.write('<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>');
-            //document.write('<link rel="stylesheet" href="../app/css/liveP.css" type="text/css" />');
         }
     </script>
     <script type="text/javascript">
         var info={
-            title:"Ö±²¥",
+            title:"ç›´æ’­",
             titlepic:"http://static.statickksmg.com/image/2015/03/30/08c0539ccf920c4473329195622ee4f7.jpg",
             url:document.URL,
-            intro:"¿´¿´Ö±²¥"
+            intro:"çœ‹çœ‹ç›´æ’­"
         };
     </script>
-<link href="http://skin.kankanews.com/v6/2016live/pc_v2/live/main.css" rel="stylesheet"></head>
+    <link href="http://skin.kankanews.com/v6/2016live/pc_v2/live/main.css" rel="stylesheet"></head>
 <body class="game-page loaded">
-<!-- nav -->
-<div class="navBox">
-    <div class="navMain clearfix">
-        <div class="left logo"><img src="http://skin.kankanews.com/v6/2016live/pc_v2/live/images/logo.png" alt="¿´¿´ÐÂÎÅÍø" /></div>
-        <ul class="clearfix left navList">
-            <li>
-                <a href="#">¾«Ñ¡</a>
-            </li>
-            <li>
-                <a href="#">Knews24</a>
-            </li>
-            <li>
-                <a href="#">Ö±²¥</a>
-            </li>
-            <li class="cur">
-                <a href="#">»Ø¿´</a>
-            </li>
-            <li>
-                <a href="#">ÐÂÎÅ</a>
-            </li>
-            <li>
-                <a href="#">¿´µã</a>
-            </li>
-        </ul>
-        <div class="searchBox right">
-            <input type="text" class="left searText" value="" placeholder="ÇëÊäÈë²éÕÒÄÚÈÝ" />
-            <input type="submit" class="left searSubmit" value="" />
-        </div>
-    </div>
-</div>
+
+<!--start å¯¼èˆª-->
+[!--temp.2016TopBar--]
+<!--end å¯¼èˆª-->
 
 <div class="place38"></div>
+
 <div class="live-box hidden clearfix">
     <div class="section">
         <div class="tv-head">
@@ -74,8 +48,7 @@
                 <div class="game-head">
                     <div class="thumb-container"></div>
                     <div class="left badge pull-left">
-                        <p class="head"><span class='title'>°¸¼þ¾Û½¹</span></p>
-                        <p class="time"><i></i><span></span><span class="end"></span></p>
+                        <p class="head"><span class='title'><?php echo $navinfor[title]?></span></p>
                     </div>
                     <div class="liveShare clearfix"></div>
                 </div>
@@ -92,20 +65,13 @@
     </div>
     <div class="aside live-Interaction">
         <div class="live-tabs clearfix">
-            <h3 class="boss live-tabs-width2 live-tabs-current" data-target="live-program" data-action="Ö±²¥ÁÐ±í">Ö±²¥ÁÐ±í</h3>
-            <h3 class="boss live-tabs-width2" data-target="live-comment" data-action="µ¯Ä»¼¯½õ"></h3>
+            <h3 class="boss live-tabs-width2 live-tabs-current" data-target="live-program" data-action="ç›´æ’­åˆ—è¡¨">ç›´æ’­åˆ—è¡¨</h3>
+            <h3 class="boss live-tabs-width2" data-target="live-comment" data-action="å¼¹å¹•é›†é”¦"></h3>
         </div>
         <div class="live-tab-content">
             <div class="tabcon" id="content-1">
                 <div class="clearfix bottom1" id="jmyg">
-                    <div class="program-title inner">
-                        <h3 class="zbIcon">ÕýÔÚÖ±²¥</h3>
-                    </div>
                     <div id="zbLiu"></div>
-                    <div class="program-title inner">
-                        <h3 class="ygIcon">Ö±²¥Ô¤¸æ</h3>
-                    </div>
-                    <div id="ygLiu"></div>
                 </div>
             </div>
             <div class="tabcon" id="content-2"></div>
@@ -113,60 +79,12 @@
     </div>
 </div>
 
-<div class="non-live-box hidden clearfix">
-    <div class="section">
-        <div class="tv-head">
-            <div class="live-head-container">
-                <div class="game-head">
-                    <div class="left badge pull-left">
-                        <p class="head">µ±Ç°²¥·Å£º<span class='title'></span></p>
-                    </div>
-                    <div class="liveShare clearfix"></div>
-                </div>
-            </div>
-        </div>
-        <div class="living-area" id="livingArea">
-            <div class="sectionBox">
-                <div class="screen livediv"></div>
-                <div class="screen" id="ipod_player" style="display:none;">
-                    <video controls="" poster=""><source src="http://hls.kksmg.com/iphone/downloads/ch1/index.m3u8" type="video/mp4" id="ipodurl"></video>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="aside live-Interaction">
-        <div class="program_list">
-            <div class="boxW">
-                <div class="date-box clearfix"></div>
-            </div>
-            <div class="live-tab-content">
-                <div class="tabcon" id="content-3">
-                    <div class="clearfix bottom1"></div>
-                </div>
-            </div>
-            <a class="listcontrol-btn" title="ÊÕÆðÁÐ±í" href="javascript:void(0);" j-delegate="hidePlayList" rseat="ÊÕÆðÁÐ±í">
-                <i class="icn icn_right"></i>
-            </a>
-        </div>
-        <div class="program_all">
-            <div class="tab clearfix">
-                <span class="cur">µçÊÓ</span>
-                <span>¹ã²¥</span>
-            </div>
-            <div class="channel_fm">
-                <div class="tabcon" id="content-4">
-                    <div class="channel item cur"></div>
-                    <div class="fm item"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!--# include virtual="http://m.kankanews.com/web/fakeESI?module=liveJson&awasas" -->
 </script>
-<script type="text/javascript" src="http://114.80.151.109/spa/20160114/vendor/jquery-1.11.1.js"></script>
-<script type="text/javascript" src='http://114.80.151.109/spa/20160114/vendor/jquery.mCustomScrollbar.concat.min.js'></script>
-<script type="text/javascript" src="http://skin.kankanews.com/v6/2016live/pc/bulid/timeCountDown.js"></script>
 
-<script type="text/javascript" src="http://skin.kankanews.com/v6/2016live/pc_v2/live/main.js"></script></body>
+<script type="text/javascript" src="http://skin.kankanews.com/v6/js/libs/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://skin.kankanews.com/v7/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="http://skin.kankanews.com/v6/2016live/pc/bulid/timeCountDown.js"></script>
+<script type="text/javascript" src="http://skin.kankanews.com/v6/2016live/pc_v2/live/main.js"></script>
+
 </html>

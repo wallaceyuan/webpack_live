@@ -72,11 +72,13 @@ i.end-btn.left{
   float: left;display: inline-block;
 }
 .aside {
-    float: left;display: inline-block;margin-left: 30px;
+    float: left;display: inline-block;
 }
 .live-Interaction .title,.live-Interaction .live-tab-content,.boxW{
 /*    background-image:url(../images/alpha-07_1ffd3f.png);*/
+    /*
     background: #262829;
+    */
 }
 .boxW{
     padding: 5px 5px 5px 5px;
@@ -96,7 +98,7 @@ i.end-btn.left{
 */
 /*右侧*/
 .aside-border{float:right;width:300px;height:1px;background:#1d2d39;}
-.live-tabs{position:relative;width:393px;height:75px;color:#fff;padding-bottom: 20px;}
+.live-tabs{position:relative;width:393px;height:75px;color:#fff;padding-bottom: 20px;margin-left: 30px;}
 .live-tabs h3 {
     float: left;
     height: 75px;
@@ -159,7 +161,9 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
     margin:0 20px;
     padding:0px;
 }
-
+.live-tab-content #jmyg{
+    background: #262829;
+}
 .live-tab-content .inner em {
     display: none;
     padding: 0 8px;
@@ -256,6 +260,19 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
 .live-tab-content .wrapper{
     position: relative;
 }
+.live-tab-content .wrapper span.arrow{
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 24px;
+    left: -15px;
+    top: 50%;
+    margin-top: -12px;
+    background: url(../images/arrow2_icon.png) no-repeat 0 0;
+}
+.live-tab-content .wrapper.now span.arrow{
+    display:block ;
+}
 .live-tab-content .wrapper .intro{
     text-align: left;
     margin-top: 10px;
@@ -302,6 +319,7 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
     padding-top: 29%;
 }
 .live-tab-content .wrapper a.link{
+    z-index: 100;
     position: absolute;
     top: 0px;left: 0px;
     /*z-index: 2;*/display: block;height: 100%;width: 100%;
@@ -311,6 +329,9 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
 }
 .live-tab-content #jmyg .wrapper.now{
     background: #1e2022;
+}
+.live-tab-content #jmyg .wrapper{
+    background: #262829;
 }
 .liveShare {
     position: absolute;
@@ -492,7 +513,7 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
 .mCustomScrollbar{-ms-touch-action:none;touch-action:none}
 .mCustomScrollbar.mCS_no_scrollbar{-ms-touch-action:auto;touch-action:auto}
 .mCustomScrollBox{position:relative;overflow:hidden;height:100%;max-width:100%;outline:0;direction:ltr}
-.mCSB_container{overflow:hidden;width:auto;height:auto}
+.mCSB_container{overflow:hidden;width:auto;height:auto;padding-left: 30px;}
 .mCSB_inside>.mCSB_container{margin-right:0px}
 .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{margin-right:0}
 .mCS-dir-rtl>.mCSB_inside>.mCSB_container{margin-right:0;margin-left:30px}

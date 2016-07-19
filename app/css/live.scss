@@ -43,11 +43,11 @@ $one_class:'kkpage-980';
     .screen embed,.screen object{
       width:nth($list,3);height: nth($list,4);
     }
-    .live-tab-content{
+    .live-tab-content,.live-tab-content #jmyg{
       height: nth($list,4)- 20 ;
     }
     .aside{
-      width:nth($list,5) ;
+      width:nth($list,5) + 30 ;
     }
     .live-tabs{
       width:nth($list,5) ;
