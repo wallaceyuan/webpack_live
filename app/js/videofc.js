@@ -28,15 +28,15 @@ var b = {
 			if (parseInt(data[key].timestamp) < parseInt(time_stamp)) {
 				liveNew.push(parseInt(data[key].id));
 				var introR = data[key].intro.replace("\\\\ ", "");
-				str1 += '<div class="wrapper" timestamp="' + data[key].timestamp + '" status="' + data[key].status + '"  id="' + data[key].id + '" intro=\'' + introR + '\'><span class="arrow"></span><a class="link" href="http://live.kankanews.com/zhibo/' + data[key].id + '.html"></a><div class="live-program inner">' +
+				str1 += '<div class="wrapper" timestamp="' + data[key].timestamp + '" status="' + data[key].status + '"  id="' + data[key].id + '" intro=\'' + introR + '\'><span class="arrow"></span><div class="live-program inner"><a class="link" href="http://live.kankanews.com/zhibo/' + data[key].id + '.html">' +
 					'<div class="videoHuiguImg"><img class="highlights-cover" src="' + data[key].titlepic + '"></div>';
 				str1 += '<div class="videoHuiguTxt"><dl><dt>' + data[key].title + '</dt>' +
-					'<dd><i></i>' + data[key].stime + '</dd><!--<span>直播</span>--></dl></div></div></div>';
+					'<dd><i></i>' + data[key].stime + '</dd><span>直播</span></dl></div></a></div></div>';
 			} else {
-				str2 += '<div class="wrapper yg"  timestamp="' + data[key].timestamp + '"  status="' + data[key].status + '" id="' + data[key].id + '" intro="' + data[key].intro + '"><span class="arrow"></span><a class="link" href="http://live.kankanews.com/zhibo/' + data[key].id + '.html"></a><div  class="live-program inner foreshow">' +
+				str2 += '<div class="wrapper yg"  timestamp="' + data[key].timestamp + '"  status="' + data[key].status + '" id="' + data[key].id + '" intro="' + data[key].intro + '"><span class="arrow"></span><div  class="live-program inner foreshow"><a class="link" href="http://live.kankanews.com/zhibo/' + data[key].id + '.html">' +
 					'<div class="videoHuiguImg"><img class="highlights-cover" src="' + data[key].titlepic + '"></div>';
 				str2 += '<div class="videoHuiguTxt"><dl><dt>' + data[key].title + '</dt>' +
-					'<dd><i></i>' + data[key].stime + '</dd><!--<span>预告</span>--></dl></div></div></div>';
+					'<dd><i></i>' + data[key].stime + '</dd><span>预告</span></dl></div></a></div></div>';
 			}
 			allNew.push(parseInt(data[key].id));
 			titleObj.push(data[key].title);
@@ -44,8 +44,8 @@ var b = {
 		}
 
 		$(".loading").remove();
-		$("#zbLiu").append(str1);
-		//$("#ygLiu").append(str2);
+		$("#zbLiu").append('<div class="program-title inner"><h3 class="zbIcon">正在直播</h3></div>'+str1);
+		$("#ygLiu").append('<div class="program-title inner"><h3 class="ygIcon">直播预告</h3></div>'+str2);
 		if (parseInt(status) == 1) {
 			var imgBox = '<div class="imgBox"><img src="http://skin.kankanews.com/v6/2016live/pc/app/images/kkline.png" width="100%" ></div>';
 			$(".live-box .livediv").append(imgBox);
@@ -81,7 +81,7 @@ var b = {
 					index = i;
 					zbStream(i, idFlag);
 				} else if (mid == idFlag) {
-					var logo = '<i class="yg-btn left">预告</i>';
+					var logo = '<i class="yg-btn left">直播预告：</i>';
 					$('.thumb-container').html(logo);
 					index = i;
 					$(this).addClass('now');

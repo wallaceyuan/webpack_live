@@ -170,20 +170,20 @@ $domClass:'kkpage-1920','kkpage-1680','kkpage-1440','kkpage-1180','kkpage-980';
   }
 }
 
-@media (max-width: $five_1920) and (min-width:$four_1680+ 1 ){
+@media (max-width: $five_1920) and (min-width:$four_1680 +  5 ){
   @include screenAdopt($five_1920);
   .non-live-box{
     min-width: 1799px;
   }
 }
-@media (max-width: $four_1680) and (min-width:$three_1440+ 1 ) {
+@media (max-width: $four_1680 + 5) and (min-width:$three_1440 + 5 ) {
   @include screenAdopt($four_1680);
   .non-live-box{
     min-width: 1559px;
   }
 }
 
-@media (max-width: $three_1440) and (min-width:$two_1180+ 1 ){
+@media (max-width: $three_1440 + 5) and (min-width:$two_1180+ 5 ){
   @include screenAdopt($three_1440);
   @include smallFont();
   .non-live-box{
@@ -191,7 +191,7 @@ $domClass:'kkpage-1920','kkpage-1680','kkpage-1440','kkpage-1180','kkpage-980';
   }
 }
 
-@media (max-width: $two_1180) {
+@media (max-width: $two_1180 + 5) {
   @include screenAdopt($two_1180,470,220);
   @include smallFont();
 

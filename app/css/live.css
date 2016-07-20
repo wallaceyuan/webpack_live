@@ -48,7 +48,9 @@ i.live-btn.left, i.yg-btn.left, i.end-btn.left {
     line-height: 75px;
 }
 i.yg-btn.left{
+    /*
     background: #00a0e9;
+    */
 }
 i.end-btn.left{
     background: #666;
@@ -93,7 +95,9 @@ i.end-btn.left{
 }
 .tv-head{position:relative;
     min-height: 75px !important;background-image:url(../images/alpha-07_1ffd3f.png);}
+/*
 .livediv{width:100%;height:100%;}
+*/
 /*#player1,#player2{width:100%;height:100%;}
 */
 /*右侧*/
@@ -158,7 +162,7 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
 .live-Interaction .inner{padding:0px 20px;/*border-bottom:1px dashed #868686;*/cursor:pointer;position: relative;}
 
 .live-tab-content #jmyg .inner{
-    margin:0 20px;
+    margin:0 5%;
     padding:0px;
 }
 .live-tab-content #jmyg{
@@ -184,7 +188,7 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
     padding: 3px 5px;
     font-size: 12px;
     position: absolute;
-    bottom: 2px;
+    bottom: 0px;
     right: 0px;
     line-height: 12px;
 }
@@ -201,7 +205,7 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
     font-size: 16px;
     padding-left: 25px;
     font-weight: 700;
-    margin: 6px 0 2px 0;
+    margin: 0px 0 2px 0;
 }
 .tabcon h3.ygIcon {
     background: url(../images/blue_dot.png) no-repeat 7px center;
@@ -230,7 +234,7 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
     top: 14px;*/
 }
 .tabcon .videoHuiguTxt dt{
-    height: 60px;overflow: hidden;
+    height: 40px;overflow: hidden;
 }
 .tabcon .videoHuiguTxt dl{
     position: relative;    height: 90px;
@@ -241,14 +245,15 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
     font-size: 16px;
     position: absolute;
     bottom: 0px;
-    left: 0px;    line-height: 16px;
+    left: 3px;
+    line-height: 16px;
 }
 .tabcon .videoHuiguTxt dd i {
     margin-right: 7px;
     display: inline-block;
     width: 14px;
     height: 14px;
-    background: url(../images/clock_gry.png) center center/14px 14px no-repeat;
+    background: url(../images/clock_gry.png)  no-repeat;
 }
 .live-tab-content .live-program.inner {
     padding: 14px 20px;
@@ -319,9 +324,10 @@ div.live-tabs h3:last-child{border-right:none;    background: #222222;/*    back
     padding-top: 29%;
 }
 .live-tab-content .wrapper a.link{
-    z-index: 100;
+    color: #fff;
+/*    z-index: 100;
     position: absolute;
-    top: 0px;left: 0px;
+    top: 0px;left: 0px;*/
     /*z-index: 2;*/display: block;height: 100%;width: 100%;
 }
 .live-tab-content #jmyg .wrapper:hover {

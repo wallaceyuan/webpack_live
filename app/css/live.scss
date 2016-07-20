@@ -40,11 +40,8 @@ $one_class:'kkpage-980';
     .section{
       width: nth($list,3);height:  nth($list,4) + 58;
     }
-    .screen embed,.screen object{
+    .screen embed,.screen object,.livediv{
       width:nth($list,3);height: nth($list,4);
-    }
-    #zbLiu{
-      min-height:nth($list,4)- 20 !important;
     }
     .live-tab-content{
       height: nth($list,4)- 20 ;
@@ -74,9 +71,7 @@ $one_class:'kkpage-980';
 @include screenAdopt($five_class,$five_1920);
 @include screenAdopt($four_class,$four_1680);
 @include screenAdopt($three_class,$three_1440);
-@include screenAdopt($two_class,$two_1180,10);
-@include screenAdopt($one_class,$two_1180,10);
-
-
+@include screenAdopt($two_class,$three_1440);
+@include screenAdopt($one_class,$three_1440);
 
 

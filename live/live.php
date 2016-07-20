@@ -4,10 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="icon" href="http://skin.kankanews.com/kankancms/images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="http://skin.kankanews.com/kankancms/images/favicon.ico" type="image/x-icon" />
-    <meta name="Keywords" content="è§†é¢‘ç›´æ’­, æ–°é—»ç›´æ’­, æ–°é—»ç›´æ’­é—´, æžç¬‘è§†é¢‘, æ˜Žæ˜Ÿè®¿è°ˆç›´æ’­, ç”µå½±ç›´æ’­, ç”µè§†å‰§ç›´æ’­, å¤©æ°”é¢„æŠ¥" />
-    <meta name="Description" content="çœ‹çœ‹æ–°é—»24å°æ—¶ç›´æ’­æµã€‚è§†é¢‘ç›´æ’­é‡å¤§äº‹ä»¶ã€ç›´æ’­çªå‘æ–°é—»ã€ç›´æ’­æƒå¨å‘å¸ƒã€ç›´æ’­ç”µå½±ç”µè§†å‰§å‘å¸ƒå¹¶ç²¾é€‰æ¯æ—¥å›½é™…ä¸Žå›½å†…è§†é¢‘æ–°é—»ã€ç¤¾ä¼šæ–°é—»ã€ä½“è‚²æ–°é—»ã€å¨±ä¹ æ–°é—»ã€è´¢ç»æ–°é—»ã€‚æ¯å¤©ä¸åŒæ—¶æ®µæ’­å‡ºè§†é¢‘èµ„è®¯ã€æ–°é—»è¯„è®ºèŠ‚ç›®ï¼Œæœé›†è®ºå›çƒ­ç‚¹ã€æ±‡èšæžç¬‘è§†é¢‘ï¼Œå‘å¸ƒå¤©æ°”é¢„æŠ¥å¹¶å¯é€šè¿‡è§†é¢‘å‚ä¸Žç›´æ’­ã€‚" />
+    <meta name="Keywords" content="ÊÓÆµÖ±²¥, ÐÂÎÅÖ±²¥, ÐÂÎÅÖ±²¥¼ä, ¸ãÐ¦ÊÓÆµ, Ã÷ÐÇ·ÃÌ¸Ö±²¥, µçÓ°Ö±²¥, µçÊÓ¾çÖ±²¥, ÌìÆøÔ¤±¨" />
+    <meta name="Description" content="¿´¿´ÐÂÎÅ24Ð¡Ê±Ö±²¥Á÷¡£ÊÓÆµÖ±²¥ÖØ´óÊÂ¼þ¡¢Ö±²¥Í»·¢ÐÂÎÅ¡¢Ö±²¥È¨Íþ·¢²¼¡¢Ö±²¥µçÓ°µçÊÓ¾ç·¢²¼²¢¾«Ñ¡Ã¿ÈÕ¹ú¼ÊÓë¹úÄÚÊÓÆµÐÂÎÅ¡¢Éç»áÐÂÎÅ¡¢ÌåÓýÐÂÎÅ¡¢ÓéÀÖ ÐÂÎÅ¡¢²Æ¾­ÐÂÎÅ¡£Ã¿Ìì²»Í¬Ê±¶Î²¥³öÊÓÆµ×ÊÑ¶¡¢ÐÂÎÅÆÀÂÛ½ÚÄ¿£¬ËÑ¼¯ÂÛÌ³ÈÈµã¡¢»ã¾Û¸ãÐ¦ÊÓÆµ£¬·¢²¼ÌìÆøÔ¤±¨²¢¿ÉÍ¨¹ýÊÓÆµ²ÎÓëÖ±²¥¡£" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title><?php echo $navinfor[title]?>_çœ‹çœ‹æ–°é—»</title>
+    <title><?php echo $navinfor[title]?>_¿´¿´ÐÂÎÅ</title>
     <script type="text/javascript">
         var now = 'now';var hkId = '84';var mid = '144';var status = '0';
         if(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod/i.test(navigator.userAgent.toLowerCase())){
@@ -26,18 +26,18 @@
     </script>
     <script type="text/javascript">
         var info={
-            title:"ç›´æ’­",
+            title:"Ö±²¥",
             titlepic:"http://static.statickksmg.com/image/2015/03/30/08c0539ccf920c4473329195622ee4f7.jpg",
             url:document.URL,
-            intro:"çœ‹çœ‹ç›´æ’­"
+            intro:"¿´¿´Ö±²¥"
         };
     </script>
     <link href="http://skin.kankanews.com/v6/2016live/pc_v2/live/main.css" rel="stylesheet"></head>
 <body class="game-page loaded">
 
-<!--start å¯¼èˆª-->
+<!--start µ¼º½-->
 [!--temp.2016TopBar--]
-<!--end å¯¼èˆª-->
+<!--end µ¼º½-->
 
 <div class="place38"></div>
 
@@ -49,6 +49,7 @@
                     <div class="thumb-container"></div>
                     <div class="left badge pull-left">
                         <p class="head"><span class='title'><?php echo $navinfor[title]?></span></p>
+                        <!--                        <p class="time"><i></i><span></span><span class="end"></span></p>-->
                     </div>
                     <div class="liveShare clearfix"></div>
                 </div>
@@ -65,13 +66,14 @@
     </div>
     <div class="aside live-Interaction">
         <div class="live-tabs clearfix">
-            <h3 class="boss live-tabs-width2 live-tabs-current" data-target="live-program" data-action="ç›´æ’­åˆ—è¡¨">ç›´æ’­åˆ—è¡¨</h3>
-            <h3 class="boss live-tabs-width2" data-target="live-comment" data-action="å¼¹å¹•é›†é”¦"></h3>
+            <h3 class="boss live-tabs-width2 live-tabs-current" data-target="live-program" data-action="Ö±²¥ÁÐ±í">Ö±²¥ÁÐ±í</h3>
+            <h3 class="boss live-tabs-width2" data-target="live-comment" data-action="µ¯Ä»¼¯½õ"></h3>
         </div>
         <div class="live-tab-content">
             <div class="tabcon" id="content-1">
                 <div class="clearfix bottom1" id="jmyg">
                     <div id="zbLiu"></div>
+                    <div id="ygLiu"></div>
                 </div>
             </div>
             <div class="tabcon" id="content-2"></div>
