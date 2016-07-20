@@ -58,7 +58,7 @@ var b = {
 			var imgBox = '<div class="imgBox"><img src="http://skin.kankanews.com/v6/2016live/pc/app/images/kkline.png" width="100%" ></div>';
 			$(".live-box .livediv").append(imgBox);
 			$(".imgBox").append('<div class="text">当前直播已结束<p>右侧菜单还有更多精彩内容</p></div>');
-			var logo = '<i class="end-btn left">已结束</i>';
+			var logo = '<i class="end-btn left">直播结束：</i>';
 			$('.game-head .time span').first().remove();
 			$('.game-head .time span.end').css('display', 'inline-block');
 			$('.thumb-container').html(logo);

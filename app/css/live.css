@@ -53,9 +53,12 @@ i.yg-btn.left{
     */
 }
 i.end-btn.left{
+/*
     background: #666;
+*/
 }
 .sectionBox{
+    background: #000;
     position: relative;
 }
 .poster{
